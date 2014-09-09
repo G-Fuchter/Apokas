@@ -1,0 +1,9 @@
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
