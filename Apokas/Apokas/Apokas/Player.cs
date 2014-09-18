@@ -12,18 +12,24 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Apokas
 {
-    public class Character
+    public class Player
     {
         public float Vida = 10.0f;
-        public Texture2D imgCharacter;
-        public Vector2 CharPos;
-        public Vector2 CharSpeed;
-        public Rectangle rctCharacter;
+        public Texture2D img;
+        public Vector2 Pos;
+        public Vector2 Speed;
+        public Rectangle rctBody;
+        public bool invencible;
+        public float lastInvenciblitity = 0f;
+        public int ValorAlfa = 1;
+        public int FadeIncrement = 3;
+        public double FadeDelay = .035;
+
 
         public void Movement()
         {
             bool run;
-            CharSpeed = new Vector2(0.0f, 0.0f); // Char speed esta ahi para predecir donde esta el character y la collisiones
+            Speed = new Vector2(0.0f, 0.0f); // Char speed esta ahi para predecir donde esta el character y la collisiones
 
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.LeftShift)) // Sprint
                 run = true;
@@ -32,30 +38,30 @@ namespace Apokas
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
             {
                 if (run == true)
-                    CharSpeed.X = -6;
+                    Speed.X = -6;
                 else
-                    CharSpeed.X = -3;
+                    Speed.X = -3;
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
             {
                 if (run == true)
-                    CharSpeed.X = 6;
+                    Speed.X = 6;
                 else
-                    CharSpeed.X = 3;
+                    Speed.X = 3;
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
             {
                 if (run == true)
-                    CharSpeed.Y = 6;
+                    Speed.Y = 6;
                 else
-                    CharSpeed.Y = 3;
+                    Speed.Y = 3;
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
             {
                 if (run == true)
-                    CharSpeed.Y = -6;
+                    Speed.Y = -6;
                 else
-                    CharSpeed.Y = -3;
+                    Speed.Y = -3;
             }
         }
     }
