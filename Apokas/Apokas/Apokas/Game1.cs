@@ -20,6 +20,7 @@ namespace Apokas
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Player objPlayer = new Player();
+        Enemies objEnemies = new Enemies();
         Enemy1 objEnemy1 = new Enemy1();
         SpriteFont font;
         float Opacity = 1f;
@@ -74,7 +75,7 @@ namespace Apokas
             // Movimiento Jugador
             objPlayer.Movement();
             //AI
-            objEnemy1.AI(objPlayer);
+            objEnemy1.AI(objPlayer, objEnemy1);
             //Updatea los Rectangles
             objPlayer.rctBody.X = (int)objPlayer.Pos.X + (int)objPlayer.Speed.X;
             objPlayer.rctBody.Y = (int)objPlayer.Pos.Y + (int)objPlayer.Speed.Y;
@@ -86,7 +87,7 @@ namespace Apokas
             if (!GraphicsDevice.Viewport.Bounds.Contains(objEnemy1.rctBody))
                 objEnemy1.Speed = new Vector2(0, 0);
             // Collision Enemigo
-            CollisionCharacters(objPlayer.rctBody, objEnemy1.rctBody, ref objPlayer.Vida, objEnemy1.Speed, ref Opacity);
+            objPlayer.CollisionCharacters(objPlayer.rctBody, objEnemy1.rctBody, ref objPlayer.Vida, objEnemy1.Speed, ref Opacity, objEnemy1, objEnemy1.Damage, ref objPlayer.currentTime, ref objPlayer.invencible,gameTime);
             //Vida
             if (objPlayer.Vida <= 0)
             {
@@ -119,6 +120,7 @@ namespace Apokas
         {
             spriteBatch.DrawString(font, Convert.ToString(objPlayer.Pos), new Vector2(800, 0), Color.White);
             spriteBatch.DrawString(font,"Vida: " + Convert.ToString(objPlayer.Vida), new Vector2(400, 0), Color.White);
+            spriteBatch.DrawString(font, "Time: " + Convert.ToString(objPlayer.currentTime), new Vector2(200, 0), Color.White);
         }
 
 
@@ -131,37 +133,6 @@ namespace Apokas
             rctCharacter.Y = (int)CharacterPos.Y; // Actualiza la pos de los rectangle a la pos actual del personaje
             rctCharacter.X = (int)CharacterPos.X;
         }
-        public void CollisionCharacters( Rectangle Player, Rectangle Character, ref float vida, Vector2 Charspeed, ref float opacity)
-        {
-            if (Player.Intersects(objEnemy1.rctBody))
-            {
-                if (objPlayer.invencible == false)
-                {
-                    objPlayer.Speed = new Vector2(0, 0);
-                    vida -= 1;
-                    /*opacity = 0.5f; PONER EN FUNCION
-                    objPlayer.FadeDelay -= GameTime.ElapsedGameTime.Totalseconds;
-                    if (objPlayer.FadeDelay <= 0)
-                    {
-                        objPlayer.FadeDelay = .035;
-                        objPlayer.ValorAlfa += objPlayer.FadeIncrement;
 
-                        if (objPlayer.ValorAlfa >= 255 || objPlayer.ValorAlfa <= 0)
-                        {
-                            objPlayer.FadeIncrement *= -1;
-                        }
-                    }
-                     */
-                    objPlayer.invencible = true;
-                    objPlayer.lastInvenciblitity += (float)GameTime.ElapsedGameTime.TotalSeconds;
-                    if (objPlayer.lastInvenciblitity > 3f)
-                    {
-                        objPlayer.invencible = false;
-                    }
-                }
-            
-            if (Character.Intersects(objPlayer.rctBody))
-                objEnemy1.Speed = new Vector2(0, 0);
-        }
     }
 }
