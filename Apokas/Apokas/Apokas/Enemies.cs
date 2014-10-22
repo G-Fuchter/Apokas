@@ -19,22 +19,22 @@ namespace Apokas
          puede usar objetos en funciones. Acá se pone las cosas que tienen todos los enemigos
          en común*/
 
-        public void AI(Player objPlayer, Enemy1 objEnemy1)
+        public void AI(Vector2 PlayerSpeed, ref Vector2 EnemySpeed, Vector2 PlayerPos, Vector2 EnemyPos, ref int EnemyVel)
         {
             //Resetea La "velocidad"
-            objEnemy1.Speed.X = 0;
-            objEnemy1.Speed.Y = 0;
-            // Checkea si su pos.y es menor y mayor y se autocorrige
-            if (objEnemy1.Pos.X < objPlayer.Pos.X - 3)
-                objEnemy1.Speed.X = objEnemy1.Vel;
-            else if (objEnemy1.Pos.X > objPlayer.Pos.X + 3)
-                objEnemy1.Speed.X = -objEnemy1.Vel;
+            EnemySpeed.X = 0;
+            EnemySpeed.Y = 0;
+            // Checkea si su pos.x es menor o mayor y se autocorrige
+            if (EnemyPos.X < PlayerPos.X - 3)
+                EnemySpeed.X = EnemyVel;
+            else if (EnemyPos.X > PlayerPos.X + 3)
+                EnemySpeed.X = -EnemyVel;
 
-            // Checkea si su pos.y es menor y mayor y se autocorrige
-            if (objEnemy1.Pos.Y < objPlayer.Pos.Y - 3)
-                objEnemy1.Speed.Y = objEnemy1.Vel;
-            else if (objEnemy1.Pos.Y > objPlayer.Pos.Y + 3)
-                objEnemy1.Speed.Y = -objEnemy1.Vel;
+            // Checkea si su pos.y es menor y mayor y se autocorriges
+            if (EnemyPos.Y < PlayerPos.Y - 3)
+                EnemySpeed.Y = EnemyVel;
+            else if (EnemyPos.Y > PlayerPos.Y + 3)
+                EnemySpeed.Y = -EnemyVel;
         }
     }
 }

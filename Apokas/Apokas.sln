@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apokas", "Apokas\Apokas\Apokas.csproj", "{FFFCC57F-354A-4B44-805B-825F80F37FD6}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "ApokasContent", "Apokas\ApokasContent\ApokasContent.contentproj", "{1B4876E0-1582-48BD-8673-C4DB87DDE7EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApokasContent", "Apokas\ApokasContent\ApokasContent.contentproj", "{1B4876E0-1582-48BD-8673-C4DB87DDE7EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16C3A27F-BDF6-46A3-A1E2-D56AF7FFE4E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

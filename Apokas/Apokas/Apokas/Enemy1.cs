@@ -15,11 +15,14 @@ namespace Apokas
 {
     public class Enemy1 : Enemies
     {
+        public Color[] textureData;
+        // bla
         public Texture2D img;
         public Vector2 Pos;
         public Vector2 Speed;
         public Rectangle rctBody;
         public int Damage = 1;
         public int Vel = 2;
+        public int Vida = 10;
     }
 }

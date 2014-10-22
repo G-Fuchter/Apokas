@@ -17,7 +17,52 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb</Output>
-      <Time>2014-06-05T20:34:38-03:00</Time>
+      <Time>2014-10-07T10:04:32-03:00</Time>
+    </Item>
+    <Item>
+      <Source>rock.png</Source>
+      <Name>rock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb</Output>
+      <Time>2014-10-14T09:45:10-03:00</Time>
+    </Item>
+    <Item>
+      <Source>character_attack.png</Source>
+      <Name>character_attack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb</Output>
+      <Time>2014-10-03T09:41:06-03:00</Time>
+    </Item>
+    <Item>
+      <Source>red_square.jpg</Source>
+      <Name>red_square</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb</Output>
+      <Time>2014-10-03T11:50:22-03:00</Time>
+    </Item>
+    <Item>
+      <Source>lago.png</Source>
+      <Name>lago</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb</Output>
+      <Time>2014-10-14T10:47:28-03:00</Time>
+    </Item>
+    <Item>
+      <Source>HbFondo.png</Source>
+      <Name>HbFondo</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb</Output>
+      <Time>2014-10-20T11:11:18-03:00</Time>
     </Item>
     <Item>
       <Source>MyFont.spritefont</Source>
@@ -27,6 +72,24 @@
       <Options>None</Options>
       <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb</Output>
       <Time>2014-09-08T14:26:00-03:00</Time>
+    </Item>
+    <Item>
+      <Source>blank.png</Source>
+      <Name>blank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2014-10-22T09:19:12-03:00</Time>
+    </Item>
+    <Item>
+      <Source>button.png</Source>
+      <Name>button</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb</Output>
+      <Time>2014-10-22T09:18:14-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -66,7 +129,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-09-19T09:31:21.5306234-03:00</Value>
+        <Value>2014-10-22T08:07:03.6573083-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
