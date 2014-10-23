@@ -1,1 +1,1 @@
-F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
