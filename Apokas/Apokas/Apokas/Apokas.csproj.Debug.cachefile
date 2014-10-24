@@ -5,7 +5,6 @@ Content\character_attack.xnb
 Content\red_square.xnb
 Content\lago.xnb
 Content\HbFondo.xnb
-Content\blank.xnb
 Content\button.xnb
 Content\Walls\down_closed.xnb
 Content\Walls\down_open.xnb
@@ -16,4 +15,4 @@ Content\Walls\right_open.xnb
 Content\Walls\up_closed.xnb
 Content\Walls\up_open.xnb
 Content\MyFont.xnb
-Content\Settigns.xnb
+Content\blank.xnb

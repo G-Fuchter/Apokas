@@ -49,6 +49,7 @@ namespace Apokas
         public Texture2D imgDown;
         // Fondo
         public Texture2D imgFondo;
+        // Entrada
 
         public void LoadWalls(ContentManager Content, bool left, bool right, bool up, bool down)
         {
@@ -68,6 +69,20 @@ namespace Apokas
                 imgDown = Content.Load<Texture2D>("Walls\\down_open");
             else
                 imgDown = Content.Load<Texture2D>("Walls\\down_closed");
+            //hitbox
+            rctLeft = new Rectangle(0, 0, imgLeft.Width, imgLeft.Height);
+            rctRight = new Rectangle(0, 0, imgRight.Width, imgRight.Height);
+            rctUp = new Rectangle(0, 0, imgUp.Width, imgUp.Height);
+            rctDown = new Rectangle(0, 0, imgDown.Width, imgDown.Height);
+            // colour
+            dataLeft = new Color[imgLeft.Width * imgLeft.Height];
+            imgLeft.GetData(dataLeft);
+            dataRight = new Color[imgRight.Width * imgRight.Height];
+            imgRight.GetData(dataRight);
+            dataUp = new Color[imgUp.Width * imgUp.Height];
+            imgUp.GetData(dataUp);
+            dataDown = new Color[imgDown.Width * imgDown.Height];
+            imgDown.GetData(dataDown);
         }
     }
 }

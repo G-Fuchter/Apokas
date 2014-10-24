@@ -99,11 +99,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="blank.png">
-      <Name>blank</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="button.png">
       <Name>button</Name>
       <Importer>TextureImporter</Importer>
@@ -153,8 +148,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Settigns.jpg">
-      <Name>Settigns</Name>
+    <Compile Include="blank.jpg">
+      <Name>blank</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

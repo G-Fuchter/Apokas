@@ -31,7 +31,7 @@ namespace Apokas
         {
             texture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 70
             size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
-            
+
         }
         public void SettingsButton(Texture2D newTexture, GraphicsDevice graphics)
         {
@@ -82,8 +82,8 @@ namespace Apokas
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, rectangle,Color.White);
-            
+            spriteBatch.Draw(texture, rectangle, Color.White);
+
         }
     }
 }

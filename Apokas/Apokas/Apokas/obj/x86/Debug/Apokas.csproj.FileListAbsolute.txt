@@ -22,28 +22,51 @@ F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemblyReference.cache
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
-C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Settigns.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+F:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+F:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemblyReference.cache
+G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
