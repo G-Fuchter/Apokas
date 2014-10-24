@@ -24,7 +24,6 @@ namespace Apokas
         Vector2 sPosition;
         Rectangle sRectangle;
 
-        Color mColor = new Color(255, 255, 255, 255);
         public Vector2 size;
 
 
@@ -53,24 +52,12 @@ namespace Apokas
 
             if (mouseRectangle.Intersects(rectangle))
             {
-                if (mColor.A == 255) down = false;
-                if (mColor.A == 0) down = true;
-                if (down) // cambia el canal alpha si el mouse esta sobre el
-                {
-                    mColor.A += 3;
-                }
-                else
-                {
-                    mColor.A -= 3;
-                }
-                //CLick
                 if (mouse.LeftButton == ButtonState.Pressed)
                 {
                     IsClicked = true;
                 }
-                else if (mColor.A < 255)
+                else
                 {
-                    mColor.A += 3;
                     IsClicked = false;
                 }
             }
@@ -92,19 +79,11 @@ namespace Apokas
         {
             position = newPositon;
         }
-        public void sSetPosition(Vector2 newPositon)
-        {
-            sPosition = newPositon;
-        }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, rectangle, mColor);
+            spriteBatch.Draw(texture, rectangle,Color.White);
             
-        }
-        public void DrawS(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(sTexture, sRectangle, mColor);
         }
     }
 }

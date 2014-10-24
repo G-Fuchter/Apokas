@@ -91,7 +91,7 @@ namespace Apokas
                     btnPlay.setPosition(new Vector2(350, 300));
             //Settings
                     btnSettings = new cButton(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
-                    btnSettings.sSetPosition(new Vector2(350, 100));
+                    btnSettings.setPosition(new Vector2(350, 400));
                 
                     red = Content.Load<Texture2D>("red_square");
                     objPlayer.imgattack = Content.Load<Texture2D>("character_attack");
@@ -237,6 +237,8 @@ namespace Apokas
                 case GameState.MainMenu:
                     spriteBatch.Draw(Content.Load<Texture2D>("blank"), new Rectangle(0, 0, 1000, 700), Color.White);
                     btnPlay.Draw(spriteBatch);
+                    
+                    btnSettings.Draw(spriteBatch);
 
                     break;
                 case GameState.Playing:
@@ -264,8 +266,7 @@ namespace Apokas
                     
                     break;
                 case GameState.Settings:
-                    spriteBatch.Draw(Content.Load<Texture2D>("Settigns"), new Rectangle(0, 0, 1000,700), Color.White);
-                    btnSettings.DrawS(spriteBatch);
+                    spriteBatch.Draw(Content.Load<Texture2D>("Settigns"), new Rectangle(0, 0, 1000, 700), Color.White);
                     break;
             }
             spriteBatch.End();
