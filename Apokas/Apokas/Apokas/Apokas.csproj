@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="cButton.cs" />
     <Compile Include="Enemy1.cs" />
+    <Compile Include="HammerWeapon.cs" />
     <Compile Include="Matter.cs" />
     <Compile Include="matter_lvl1.cs" />
     <Compile Include="Player.cs" />

@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb</Output>
-      <Time>2014-08-14T20:44:50-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb</Output>
+      <Time>2014-10-23T19:27:31.0490101-03:00</Time>
     </Item>
     <Item>
       <Source>Enemy1.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb</Output>
-      <Time>2014-10-07T10:04:32-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb</Output>
+      <Time>2014-10-23T19:27:31.0960128-03:00</Time>
     </Item>
     <Item>
       <Source>rock.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb</Output>
-      <Time>2014-10-14T09:45:10-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb</Output>
+      <Time>2014-10-23T19:27:31.2290204-03:00</Time>
     </Item>
     <Item>
       <Source>character_attack.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb</Output>
-      <Time>2014-10-03T09:41:06-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb</Output>
+      <Time>2014-10-23T19:27:31.1130138-03:00</Time>
     </Item>
     <Item>
       <Source>red_square.jpg</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb</Output>
-      <Time>2014-10-03T11:50:22-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb</Output>
+      <Time>2014-10-23T19:27:31.2270203-03:00</Time>
     </Item>
     <Item>
       <Source>lago.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb</Output>
-      <Time>2014-10-14T10:47:28-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb</Output>
+      <Time>2014-10-23T19:27:31.1150139-03:00</Time>
     </Item>
     <Item>
       <Source>HbFondo.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb</Output>
-      <Time>2014-10-20T11:11:18-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb</Output>
+      <Time>2014-10-23T19:27:31.0980129-03:00</Time>
     </Item>
     <Item>
       <Source>blank.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb</Output>
-      <Time>2014-10-22T09:19:12-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb</Output>
+      <Time>2014-10-23T20:33:02.3698688-03:00</Time>
     </Item>
     <Item>
       <Source>button.png</Source>
@@ -79,17 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb</Output>
-      <Time>2014-10-22T09:18:14-03:00</Time>
-    </Item>
-    <Item>
-      <Source>MyFont.spritefont</Source>
-      <Name>MyFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb</Output>
-      <Time>2014-09-08T14:26:00-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb</Output>
+      <Time>2014-10-23T19:27:31.1120137-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\down_closed.png</Source>
@@ -97,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb</Output>
-      <Time>2014-10-22T22:38:42-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb</Output>
+      <Time>2014-10-23T19:46:22.6017312-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\down_open.png</Source>
@@ -106,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb</Output>
-      <Time>2014-10-22T22:39:08-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb</Output>
+      <Time>2014-10-23T19:46:22.6057314-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\left_closed.png</Source>
@@ -115,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb</Output>
-      <Time>2014-10-22T22:34:30-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb</Output>
+      <Time>2014-10-23T19:46:22.6067315-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\left_open.png</Source>
@@ -124,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb</Output>
-      <Time>2014-10-22T22:50:22-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb</Output>
+      <Time>2014-10-23T19:46:22.6077316-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\right_closed.png</Source>
@@ -133,8 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb</Output>
-      <Time>2014-10-22T22:41:38-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb</Output>
+      <Time>2014-10-23T19:46:22.6087316-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\right_open.png</Source>
@@ -142,8 +133,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb</Output>
-      <Time>2014-10-22T22:41:14-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb</Output>
+      <Time>2014-10-23T19:46:22.6107317-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\up_closed.png</Source>
@@ -151,8 +142,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb</Output>
-      <Time>2014-10-22T22:26:56-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb</Output>
+      <Time>2014-10-23T19:46:22.614732-03:00</Time>
     </Item>
     <Item>
       <Source>Walls\up_open.png</Source>
@@ -160,8 +151,26 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb</Output>
-      <Time>2014-10-22T22:33:26-03:00</Time>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb</Output>
+      <Time>2014-10-23T19:46:22.6197322-03:00</Time>
+    </Item>
+    <Item>
+      <Source>MyFont.spritefont</Source>
+      <Name>MyFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb</Output>
+      <Time>2014-10-23T19:27:31.100013-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Settigns.jpg</Source>
+      <Name>Settigns</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Settigns.xnb</Output>
+      <Time>2014-10-23T22:30:27.8958498-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -169,10 +178,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\</RootDirectory>
-      <LoggerRootDirectory>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\</LoggerRootDirectory>
-      <IntermediateDirectory>F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\ApokasContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\EQUIPO\Desktop\BackUpPendrive\Nacho\Terraria\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -201,7 +210,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-08-14T20:35:04.0832672-03:00</Value>
+        <Value>2014-08-16T14:25:00.3597087-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
