@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb</Output>
       <Time>2014-10-23T20:33:22-03:00</Time>
     </Item>
     <Item>
@@ -34,17 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
-    </Item>
-    <Item>
-      <Source>red_square.jpg</Source>
-      <Name>red_square</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb</Output>
-      <Time>2014-10-23T20:33:22-03:00</Time>
     </Item>
     <Item>
       <Source>lago.png</Source>
@@ -52,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -61,16 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb</Output>
-      <Time>2014-10-23T20:33:20-03:00</Time>
-    </Item>
-    <Item>
-      <Source>button.png</Source>
-      <Name>button</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -79,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -88,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -97,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -106,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -115,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -124,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -133,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
     </Item>
     <Item>
@@ -142,8 +124,143 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\down_closed.png</Source>
+      <Name>SkinWalls\down_closed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb</Output>
+      <Time>2014-10-29T11:49:32-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\down_open.png</Source>
+      <Name>SkinWalls\down_open</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb</Output>
+      <Time>2014-10-29T11:48:46-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\left_closed.png</Source>
+      <Name>SkinWalls\left_closed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb</Output>
+      <Time>2014-10-29T11:53:00-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\left_open.png</Source>
+      <Name>SkinWalls\left_open</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb</Output>
+      <Time>2014-10-29T11:53:48-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\right_closed.png</Source>
+      <Name>SkinWalls\right_closed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb</Output>
+      <Time>2014-10-29T11:51:12-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\right_open.png</Source>
+      <Name>SkinWalls\right_open</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb</Output>
+      <Time>2014-10-29T11:51:52-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\up_closed.png</Source>
+      <Name>SkinWalls\up_closed</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb</Output>
+      <Time>2014-10-29T11:54:48-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SkinWalls\up_open.png</Source>
+      <Name>SkinWalls\up_open</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb</Output>
+      <Time>2014-10-29T11:56:02-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Grass.png</Source>
+      <Name>Grass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb</Output>
+      <Time>2014-10-31T13:06:18-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SettingsButton.png</Source>
+      <Name>SettingsButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb</Output>
+      <Time>2014-10-31T15:08:32-03:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayButton.png</Source>
+      <Name>PlayButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb</Output>
+      <Time>2014-10-31T13:12:10-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Main Menu.png</Source>
+      <Name>Main Menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb</Output>
+      <Time>2014-10-31T13:13:50-03:00</Time>
+    </Item>
+    <Item>
+      <Source>SettingsMenu.png</Source>
+      <Name>SettingsMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb</Output>
+      <Time>2014-10-31T13:14:36-03:00</Time>
+    </Item>
+    <Item>
+      <Source>ExitButton.png</Source>
+      <Name>ExitButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb</Output>
+      <Time>2014-10-31T14:52:32-03:00</Time>
+    </Item>
+    <Item>
+      <Source>red_square.png</Source>
+      <Name>red_square</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb</Output>
+      <Time>2014-10-31T15:39:36-03:00</Time>
     </Item>
     <Item>
       <Source>MyFont.spritefont</Source>
@@ -151,17 +268,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb</Output>
+      <Output>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb</Output>
       <Time>2014-10-23T20:33:20-03:00</Time>
-    </Item>
-    <Item>
-      <Source>blank.jpg</Source>
-      <Name>blank</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb</Output>
-      <Time>2014-10-24T19:57:30-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -169,39 +277,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>G:\Proyecto copia\Apokas\Apokas\ApokasContent\</RootDirectory>
-      <LoggerRootDirectory>G:\Proyecto copia\Apokas\Apokas\Apokas\</LoggerRootDirectory>
-      <IntermediateDirectory>G:\Proyecto copia\Apokas\Apokas\ApokasContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>G:\Proyecto copia\Apokas\Apokas\Apokas\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>G:\Proyecto\Apokas\Apokas\ApokasContent\</RootDirectory>
+      <LoggerRootDirectory>G:\Proyecto\Apokas\Apokas\Apokas\</LoggerRootDirectory>
+      <IntermediateDirectory>G:\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Archivos de programa\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-08-14T20:35:04.0832672-03:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-11-04T09:22:17.3292606-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

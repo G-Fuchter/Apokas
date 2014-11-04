@@ -2,10 +2,8 @@ Content\Character.xnb
 Content\Enemy1.xnb
 Content\rock.xnb
 Content\character_attack.xnb
-Content\red_square.xnb
 Content\lago.xnb
 Content\HbFondo.xnb
-Content\button.xnb
 Content\Walls\down_closed.xnb
 Content\Walls\down_open.xnb
 Content\Walls\left_closed.xnb
@@ -14,5 +12,19 @@ Content\Walls\right_closed.xnb
 Content\Walls\right_open.xnb
 Content\Walls\up_closed.xnb
 Content\Walls\up_open.xnb
+Content\SkinWalls\down_closed.xnb
+Content\SkinWalls\down_open.xnb
+Content\SkinWalls\left_closed.xnb
+Content\SkinWalls\left_open.xnb
+Content\SkinWalls\right_closed.xnb
+Content\SkinWalls\right_open.xnb
+Content\SkinWalls\up_closed.xnb
+Content\SkinWalls\up_open.xnb
+Content\Grass.xnb
+Content\SettingsButton.xnb
+Content\PlayButton.xnb
+Content\Main Menu.xnb
+Content\SettingsMenu.xnb
+Content\ExitButton.xnb
+Content\red_square.xnb
 Content\MyFont.xnb
-Content\blank.xnb

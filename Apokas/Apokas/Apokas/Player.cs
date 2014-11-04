@@ -32,6 +32,8 @@ namespace Apokas
         public float AttackTime;
         public bool AttackCollision;
         public bool Attacked1 = false;
+        // player facing
+        public bool[] face = new bool[4]; 
         
         // Probando invecibilidad
         public float currentTime;
@@ -42,7 +44,7 @@ namespace Apokas
         /// si hay algo, no le agrega nada pos. Si no hay nada le agrega a pos y ahí se mueve
         /// el personaje.
         /// </summary>
-        public void Control(ref bool IsAttacking)
+        public void Control(ref bool IsAttacking, ref Rectangle rctSwordo)
         {
             //Ataque
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Space))
@@ -65,6 +67,13 @@ namespace Apokas
                 run = false;
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.A))
             {
+                //Left
+                face[0] = true;
+                face[1] = false;
+                face[2] = false;
+                face[3] = false;
+                rctSwordo.X = (int)Pos.X - rctSwordo.Width;
+                rctSwordo.Y = (int)Pos.Y + img.Height / 2;
                 if (run == true)
                     Speed.X = -6;
                 else
@@ -72,7 +81,14 @@ namespace Apokas
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
             {
-                
+                //right
+                face[0] = false;
+                face[1] = true;
+                face[2] = false;
+                face[3] = false;
+                rctSwordo.X = (int)Pos.X + img.Width;
+                rctSwordo.Y = (int)Pos.Y + img.Height / 2;
+                //sprint
                 if (run == true)
                     Speed.X = 6;
                 else
@@ -80,6 +96,14 @@ namespace Apokas
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
             {
+                //Down
+                face[0] = false;
+                face[1] = false;
+                face[2] = false;
+                face[3] = true;
+                rctSwordo.X = (int)Pos.X + img.Width/2;
+                rctSwordo.Y = (int)Pos.Y + img.Height;
+                //Sprint
                 if (run == true)
                     Speed.Y = 6;
                 else
@@ -87,6 +111,14 @@ namespace Apokas
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
             {
+                //Up
+                face[0] = false;
+                face[1] = false;
+                face[2] = true;
+                face[3] = false;
+                rctSwordo.X = (int)Pos.X + img.Width / 2;
+                rctSwordo.Y = (int)Pos.Y - rctSwordo.Height;
+                //sprint
                 if (run == true)
                     Speed.Y = -6;
                 else

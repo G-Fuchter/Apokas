@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -17,6 +17,17 @@ namespace Apokas
     /// </summary>
     public class Apokas : Microsoft.Xna.Framework.Game
     {
+
+        // objeto
+        Consola objConosla = new Consola();
+        Matter Lago = new Matter();
+        Matter Roca = new Matter();
+        Matter LeftWall = new Matter();
+        Matter RightWall = new Matter();
+        Matter UpWall = new Matter();
+        Matter DownWall = new Matter();
+        Matter[] Wallskin = new Matter[4];
+
         Texture2D red;
         //Testing
         GraphicsDeviceManager graphics;
@@ -25,8 +36,6 @@ namespace Apokas
         Player objPlayer = new Player();
         Enemies objEnemies = new Enemies();
         Enemy1 objEnemy1 = new Enemy1();
-        Matter objMatter = new Matter();
-        matter_lvl1 objMatter_lvl1 = new matter_lvl1();
         Room objRoom = new Room();
         //font
         SpriteFont font;
@@ -43,6 +52,8 @@ namespace Apokas
 
         cButton btnPlay;
         cButton btnSettings;
+        cButton btnExit;
+        
 
         public Apokas()
         {
@@ -57,7 +68,9 @@ namespace Apokas
 
         protected override void Initialize()
         {
-            //World
+            //Wallskin
+            for (int a = 0; a < 4; a++)
+                Wallskin[a] = new Matter();
             
             objRoom.worldgenerate(ref objRoom.world);
             objRoom.Roomselect(ref objRoom.Roomx, ref objRoom.Roomy, objRoom.world);
@@ -70,9 +83,9 @@ namespace Apokas
             objEnemy1.Pos = new Vector2(600, 600);
             objEnemy1.Speed = new Vector2(0, 0);
                 //Rock
-            objMatter_lvl1.PosRock = new Vector2(450, 250);
+            Roca.Pos = new Vector2(450, 250);
                 //Lago
-            objMatter_lvl1.PosLago = new Vector2(400, 400);
+            Lago.Pos = new Vector2(400, 400);
             //variables
             objPlayer.invencible = false;
             objPlayer.Vida = 10;
@@ -82,32 +95,36 @@ namespace Apokas
 
         protected override void LoadContent()
         {
+
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
 
             //mainMenu
             IsMouseVisible = true;
-            btnPlay = new cButton(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
-            btnPlay.setPosition(new Vector2(350, 300));
+            btnPlay = new cButton(Content.Load<Texture2D>("PlayButton"), graphics.GraphicsDevice);
+            btnPlay.setPosition(new Vector2(450, 250));
             //Settings
-            btnSettings = new cButton(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
-            btnSettings.setPosition(new Vector2(350, 400));
+            btnSettings = new cButton(Content.Load<Texture2D>("SettingsButton"), graphics.GraphicsDevice);
+            btnSettings.setPosition(new Vector2(450, 375));
+            //Exit
+            btnExit = new cButton(Content.Load<Texture2D>("ExitButton"), graphics.GraphicsDevice);
+            btnExit.setPosition(new Vector2(450, 500));
 
 
             // Images
-            red = Content.Load<Texture2D>("red_square");
+            red = Content.Load<Texture2D>("red_square"); 
             objPlayer.imgattack = Content.Load<Texture2D>("character_attack");
             objPlayer.img = Content.Load<Texture2D>("Character");
             objEnemy1.img = Content.Load<Texture2D>("Enemy1");
-            objMatter_lvl1.imgRock = Content.Load<Texture2D>("rock");
-            objMatter_lvl1.imgLago = Content.Load<Texture2D>("lago");
-            objMatter_lvl1.LoadWalls(Content, objRoom.leftopen, objRoom.rightopen, objRoom.upopen, objRoom.downopen); //carga los hitboxes tambien
+            Roca.img = Content.Load<Texture2D>("rock");
+            Lago.img = Content.Load<Texture2D>("lago");
+            objRoom.LoadWalls(Content, objRoom.leftopen, objRoom.rightopen, objRoom.upopen, objRoom.downopen, LeftWall, RightWall, UpWall, DownWall, Wallskin); //carga los hitboxes tambien
             // Hitbox
-            objMatter_lvl1.rctRock = new Rectangle((int)(objMatter_lvl1.PosRock.X), (int)(objMatter_lvl1.PosRock.Y), (objMatter_lvl1.imgRock.Width), objMatter_lvl1.imgRock.Height);
+            Roca.rct = new Rectangle((int)(Roca.Pos.X), (int)(Roca.Pos.Y), (Roca.img.Width), Roca.img.Height);
             objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
             objEnemy1.rctBody = new Rectangle((int)(objEnemy1.Pos.X - objEnemy1.img.Width / 2), (int)(objEnemy1.Pos.Y - objEnemy1.img.Height / 2), objEnemy1.img.Width, objEnemy1.img.Height);
             objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
-            objMatter_lvl1.rctLago = new Rectangle((int)(objMatter_lvl1.PosLago.X), (int)(objMatter_lvl1.PosLago.Y), (objMatter_lvl1.imgLago.Width), objMatter_lvl1.imgLago.Height);
+            Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
             //Font
             font = Content.Load<SpriteFont>("MyFont");
             // Collision data
@@ -118,24 +135,13 @@ namespace Apokas
             objEnemy1.textureData = new Color[objEnemy1.img.Width * objEnemy1.img.Height];
             objEnemy1.img.GetData(objEnemy1.textureData);
                 //rock
-            objMatter_lvl1.dataRock = new Color[objMatter_lvl1.imgRock.Width * objMatter_lvl1.imgRock.Height];
-            objMatter_lvl1.imgRock.GetData(objMatter_lvl1.dataRock);
+            Roca.data = new Color[Roca.img.Width * Roca.img.Height];
+            Roca.img.GetData(Roca.data);
                 //lago
-            objMatter_lvl1.dataLago = new Color[objMatter_lvl1.imgLago.Width * objMatter_lvl1.imgLago.Height];
-            objMatter_lvl1.imgLago.GetData(objMatter_lvl1.dataLago);
-                // walls
-            objMatter_lvl1.dataLeft = new Color[objMatter_lvl1.imgLeft.Width * objMatter_lvl1.imgLeft.Height];
-            objMatter_lvl1.imgLeft.GetData(objMatter_lvl1.dataLeft);
-            objMatter_lvl1.dataRight = new Color[objMatter_lvl1.imgRight.Width * objMatter_lvl1.imgRight.Height];
-            objMatter_lvl1.imgRight.GetData(objMatter_lvl1.dataRight);
-            objMatter_lvl1.dataUp = new Color[objMatter_lvl1.imgUp.Width * objMatter_lvl1.imgUp.Height];
-            objMatter_lvl1.imgUp.GetData(objMatter_lvl1.dataUp);
-            objMatter_lvl1.dataDown = new Color[objMatter_lvl1.imgDown.Width * objMatter_lvl1.imgDown.Height];
-            objMatter_lvl1.imgDown.GetData(objMatter_lvl1.dataDown);
-            //button
-            IsMouseVisible = true;
-            btnPlay = new cButton(Content.Load<Texture2D>("Button"), graphics.GraphicsDevice);
-            btnPlay.setPosition(new Vector2(350, 300));
+            Lago.data = new Color[Lago.img.Width * Lago.img.Height];
+            Lago.img.GetData(Lago.data);
+            //Write
+            objConosla.Write(objRoom.world, objRoom);
         }
 
         protected override void UnloadContent()
@@ -157,6 +163,8 @@ namespace Apokas
                     btnPlay.Update(mouse);
                     if (btnSettings.sIsClicked == true) CurrentGameState = GameState.Settings;
                     btnSettings.Update(mouse);
+                    if (btnExit.eIsClicked == true) this.Exit();
+                    btnExit.Update(mouse);
 
                     break;
                 case GameState.Playing:
@@ -165,14 +173,14 @@ namespace Apokas
                     IsMouseVisible = false;
 
                     // Movimiento Jugador
-                    objPlayer.Control(ref objPlayer.isAttacking);
+                    objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword);
                     //AI
-                    objEnemy1.AI(objPlayer.Speed, ref objEnemy1.Speed, objPlayer.Pos, objEnemy1.Pos, ref objEnemy1.Vel);
+                    objEnemy1.AI(objPlayer.Speed, ref objEnemy1.Speed, objPlayer.Pos, objEnemy1.Pos, ref objEnemy1.Vel, gameTime);
                     //Attack
                     objPlayer.Attack(objEnemy1.rctBody, ref objEnemy1.Vida, ref objEnemy1.Speed, ref objPlayer.Attacked1);
                     //Updatea los Rectangles
-                    objPlayer.rctSword.Y = (int)objPlayer.Pos.Y + objPlayer.img.Height / 2 - 5;
-                    objPlayer.rctSword.X = (int)objPlayer.Pos.X + objPlayer.img.Width;
+                    /*objPlayer.rctSword.Y = (int)objPlayer.Pos.Y + objPlayer.img.Height / 2 - 5;
+                    objPlayer.rctSword.X = (int)objPlayer.Pos.X + objPlayer.img.Width;*/
                     objPlayer.rctBody.X = (int)objPlayer.Pos.X + (int)objPlayer.Speed.X;
                     objPlayer.rctBody.Y = (int)objPlayer.Pos.Y + (int)objPlayer.Speed.Y;
                     objEnemy1.rctBody.X = (int)objEnemy1.Pos.X + (int)objEnemy1.Speed.X;
@@ -186,20 +194,14 @@ namespace Apokas
                     objPlayer.CollisionCharacters(objPlayer.rctBody, objEnemy1.rctBody, ref objPlayer.Vida, objEnemy1.Speed, ref Opacity, objEnemy1, objEnemy1.Damage, ref objPlayer.currentTime, ref objPlayer.invencible, gameTime, objPlayer.textureData, objEnemy1.textureData);
                     // Collision Matter
                     //Rock
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctRock, objPlayer.rctBody, objMatter_lvl1.DamageRock, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataRock);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctRock, objEnemy1.rctBody, objMatter_lvl1.DamageRock, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataRock);
+                    Roca.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                     //Lago
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctLago, objPlayer.rctBody, objMatter_lvl1.DamageLago, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataLago);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctLago, objEnemy1.rctBody, objMatter_lvl1.DamageLago, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataLago);
+                    Lago.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                     //walls
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctLeft, objPlayer.rctBody, 0, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataLeft);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctLeft, objEnemy1.rctBody, 0, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataLeft);
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctRight, objPlayer.rctBody, 0, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataRight);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctRight, objEnemy1.rctBody, 0, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataRight);
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctUp, objPlayer.rctBody, 0, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataUp);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctUp, objEnemy1.rctBody, 0, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataUp);
-                    objMatter.CollisionwPlayer(ref objPlayer.Speed, objMatter_lvl1.rctDown, objPlayer.rctBody, 0, ref objPlayer.Vida, objPlayer.textureData, objMatter_lvl1.dataDown);
-                    objMatter.CollisionwPlayer(ref objEnemy1.Speed, objMatter_lvl1.rctDown, objEnemy1.rctBody, 0, ref objEnemy1.Vida, objEnemy1.textureData, objMatter_lvl1.dataDown);
+                    LeftWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                    RightWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                    UpWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                    DownWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                     //Vida
                     if (objPlayer.Vida <= 0)
                     {
@@ -214,7 +216,10 @@ namespace Apokas
                     // DoAttack
                     objPlayer.DoAttack(gameTime);
                     // Room Change
-                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, objEnemy1, objMatter_lvl1, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content);
+                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, objEnemy1, LeftWall, RightWall, UpWall, DownWall, Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin);
+                    break;
+                case GameState.Settings:
+                    // poner el back buton
                     break;
             }
             // TODO: Add your update logic here
@@ -233,36 +238,34 @@ namespace Apokas
             switch (CurrentGameState)
             {
                 case GameState.MainMenu:
-                    btnPlay.Draw(spriteBatch);
                     btnSettings.Draw(spriteBatch);
-                    spriteBatch.Draw(Content.Load<Texture2D>("blank"), new Rectangle(0, 0, 1000, 700), Color.White);
+                    btnPlay.Draw(spriteBatch);
+                    btnExit.Draw(spriteBatch);
+                    
+                    spriteBatch.Draw(Content.Load<Texture2D>("Main Menu"), new Rectangle(0, 0, 1000, 700), Color.White);
                     break;
                 case GameState.Playing:
-                    // text
-                    DrawText();
-                    // Puertas
-                    spriteBatch.Draw(objMatter_lvl1.imgLeft, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(objMatter_lvl1.imgRight, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(objMatter_lvl1.imgUp, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(objMatter_lvl1.imgDown, new Vector2(0, 0), Color.White);
-
                     // Obstaculos
-                    spriteBatch.Draw(objMatter_lvl1.imgRock, objMatter_lvl1.PosRock, Color.White);
-                    spriteBatch.Draw(objMatter_lvl1.imgLago, objMatter_lvl1.PosLago, Color.White);
+                    spriteBatch.Draw(Roca.img, Roca.Pos, Color.White);
+                    spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
+                    //playa
                     if (objPlayer.isAttacking == true)
-                    {
                         spriteBatch.Draw(objPlayer.imgattack, objPlayer.Pos, Color.White * Opacity);
-                    }
                     else
-                    {
                         spriteBatch.Draw(objPlayer.img, objPlayer.Pos, Color.White * Opacity);
-                    }
+                    //puertas
+                    spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
+                    spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
+
                     spriteBatch.Draw(objEnemy1.img, objEnemy1.Pos, Color.White);
                     spriteBatch.Draw(red, new Vector2(objPlayer.rctSword.X, objPlayer.rctSword.Y), Color.White);
-
+                    spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
+                    
                     break;
                 case GameState.Settings:
-                    spriteBatch.Draw(Content.Load<Texture2D>("Settigns"), new Rectangle(0, 0, 1000, 700), Color.White);
+                    spriteBatch.Draw(Content.Load<Texture2D>("SettingsMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
                     break;
             }
             spriteBatch.End();
@@ -275,7 +278,7 @@ namespace Apokas
             spriteBatch.DrawString(font,"Vida: " + Convert.ToString(objPlayer.IntersectPixels(objPlayer.rctBody, objPlayer.textureData, objEnemy1.rctBody, objEnemy1.textureData)), new Vector2(400, 0), Color.White);
             spriteBatch.DrawString(font, "Time: " + Convert.ToString(objPlayer.currentTime), new Vector2(200, 0), Color.White);
             spriteBatch.DrawString(font, Convert.ToString(objRoom.Roomx) + Convert.ToString(objRoom.Roomy), new Vector2(150, 0), Color.White);
-            spriteBatch.DrawString(font, Convert.ToString(objRoom.world[objRoom.Roomx - 1, objRoom.Roomy]) + Convert.ToString(objRoom.world[objRoom.Roomx, objRoom.Roomy] + Convert.ToString(objRoom.world[objRoom.Roomx + 1, objRoom.Roomy])), new Vector2(100, 0), Color.White);
+            //spriteBatch.DrawString(font, Convert.ToString(objRoom.world[objRoom.Roomx - 1, objRoom.Roomy]) + Convert.ToString(objRoom.world[objRoom.Roomx, objRoom.Roomy] + Convert.ToString(objRoom.world[objRoom.Roomx + 1, objRoom.Roomy])), new Vector2(100, 0), Color.White);
         }
 
 

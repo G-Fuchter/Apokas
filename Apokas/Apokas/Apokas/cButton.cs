@@ -20,34 +20,44 @@ namespace Apokas
         Vector2 position;
         Rectangle rectangle;
         // settings button
-        Texture2D sTexture;
-        Vector2 sPosition;
+        //Texture2D sTexture;
         Rectangle sRectangle;
+        // exit button
+        //Texture2D eTexture;
+        Rectangle eRectangle;
 
         public Vector2 size;
 
 
         public cButton(Texture2D newTexture, GraphicsDevice graphics)
         {
-            texture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 70
+            texture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 700
             size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
 
         }
-        public void SettingsButton(Texture2D newTexture, GraphicsDevice graphics)
+        /*public void SettingsButton(Texture2D newTexture, GraphicsDevice graphics)
         {
-            sTexture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 70
+            sTexture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 700
             size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
 
         }
-        bool down;
+        public void eButton(Texture2D newTexture, GraphicsDevice graphics)
+        {
+            eTexture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 700
+            size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
+
+        }*/
         public bool IsClicked;
 
         public bool sIsClicked;
+
+        public bool eIsClicked;
 
         public void Update(MouseState mouse)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y);
             sRectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y);
+            eRectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y); 
             Rectangle mouseRectangle = new Rectangle(mouse.X, mouse.Y, 1, 1); //Rectangle del mouse
 
             if (mouseRectangle.Intersects(rectangle))
@@ -71,6 +81,17 @@ namespace Apokas
                 else
                 {
                     sIsClicked = false;
+                }
+            }
+            if (mouseRectangle.Intersects(eRectangle))
+            {
+                if (mouse.LeftButton == ButtonState.Pressed)
+                {
+                    eIsClicked = true;
+                }
+                else
+                {
+                    eIsClicked = false;
                 }
             }
         }

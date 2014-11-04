@@ -70,3 +70,152 @@ G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssembl
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\down_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\down_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\left_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\left_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\right_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\right_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\up_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\up_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
