@@ -12,6 +12,7 @@ namespace Apokas
         Room objRoom = new Room();
         [DllImport("kernel32")]
         static extern bool AllocConsole();
+
         public void Write(int[,] mundo, Room cuarto)
         {
             AllocConsole();
@@ -21,6 +22,13 @@ namespace Apokas
                 Console.WriteLine(Convert.ToString(a) + "| " + Convert.ToString(mundo[0, a]) + " " + Convert.ToString(mundo[1, a]) + " " + Convert.ToString(mundo[2, a]) + " " + Convert.ToString(mundo[3, a]) + " " + Convert.ToString(mundo[4, a]) + " " + Convert.ToString(mundo[5, a]));
             Console.WriteLine("____________________");
             Console.WriteLine(Convert.ToString(cuarto.Roomx) + ";" + Convert.ToString(cuarto.Roomy));
+        }
+
+        public void cout(string a, string b, string c, string d)
+        {
+            string space = " ";
+            AllocConsole();
+            Console.WriteLine(a + space + b + space + c + space + d);
         }
     }
 }

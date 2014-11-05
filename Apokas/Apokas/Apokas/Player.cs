@@ -39,6 +39,7 @@ namespace Apokas
         public float currentTime;
         // objetos
         Enemy1 objEnemy1 = new Enemy1();
+        Consola Con = new Consola();
         /// <summary>
         /// Movimiento, hay 2 vectores, posición y speed. Speed predice donde vas a moverte y
         /// si hay algo, no le agrega nada pos. Si no hay nada le agrega a pos y ahí se mueve
@@ -141,8 +142,6 @@ namespace Apokas
                     opacity = 0.5f; // Reduce la opacidad del enemigo
 
                     inv = true; // lo hace invesible
-
-                    objEnemy.Speed = new Vector2(0, 0);
                 }
             }
             // Si es invencible
@@ -160,7 +159,7 @@ namespace Apokas
 
 
         //Funcion de ATAQUE
-        public void Attack(Rectangle rctenemy,ref int vidaenemy, ref Vector2 speedenemy, ref bool attackedonce)
+        public void Attack(Rectangle rctenemy,ref int vidaenemy, ref Vector2 speedenemy, ref bool attackedonce, ref bool knock, ref string knockside)
         {
             if (rctSword.Intersects(rctenemy)) // intersecta la espada con el enemigo
             {
@@ -169,6 +168,17 @@ namespace Apokas
                      vidaenemy -= 1;
                      speedenemy = new Vector2(0, 0);
                      attackedonce = true;
+                    //knocback
+                     knock = true;
+                     if (face[0])
+                         knockside = "left";
+                     else if (face[1])
+                         knockside = "right";
+                     else if (face[2])
+                         knockside = "up";
+                     else if (face[3])
+                         knockside = "down";
+                     Con.cout("Attack!", knockside, Convert.ToString(objEnemy1.bool_knockback), null);
                 }
             }
         }

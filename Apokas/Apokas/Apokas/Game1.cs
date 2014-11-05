@@ -53,8 +53,8 @@ namespace Apokas
         cButton btnPlay;
         cButton btnSettings;
         cButton btnExit;
-        
 
+        Song GameMusic;
         public Apokas()
         {
             // Altura y Ancho de la ventana
@@ -71,7 +71,6 @@ namespace Apokas
             //Wallskin
             for (int a = 0; a < 4; a++)
                 Wallskin[a] = new Matter();
-            
             objRoom.worldgenerate(ref objRoom.world);
             objRoom.Roomselect(ref objRoom.Roomx, ref objRoom.Roomy, objRoom.world);
             objRoom.doors(objRoom.world, objRoom.Roomx, objRoom.Roomy, ref objRoom.leftopen, ref objRoom.downopen, ref objRoom.rightopen, ref objRoom.upopen);
@@ -142,6 +141,9 @@ namespace Apokas
             Lago.img.GetData(Lago.data);
             //Write
             objConosla.Write(objRoom.world, objRoom);
+            // musica
+            GameMusic = Content.Load<Song>("GameMusic");
+
         }
 
         protected override void UnloadContent()
@@ -161,6 +163,8 @@ namespace Apokas
                 case GameState.MainMenu:
                     if (btnPlay.IsClicked == true) CurrentGameState = GameState.Playing;
                     btnPlay.Update(mouse);
+                    MediaPlayer.Play(GameMusic);
+                    MediaPlayer.IsRepeating = true;
                     if (btnSettings.sIsClicked == true) CurrentGameState = GameState.Settings;
                     btnSettings.Update(mouse);
                     if (btnExit.eIsClicked == true) this.Exit();
@@ -175,9 +179,10 @@ namespace Apokas
                     // Movimiento Jugador
                     objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword);
                     //AI
-                    objEnemy1.AI(objPlayer.Speed, ref objEnemy1.Speed, objPlayer.Pos, objEnemy1.Pos, ref objEnemy1.Vel, gameTime);
+                    objEnemy1.AI(objPlayer.Speed, ref objEnemy1.Speed, objPlayer.Pos, ref objEnemy1.Pos, ref objEnemy1.Vel,objPlayer.face,objEnemy1.bool_knockback, gameTime);
+                    objEnemy1.knockback(objEnemy1.bool_knockback);
                     //Attack
-                    objPlayer.Attack(objEnemy1.rctBody, ref objEnemy1.Vida, ref objEnemy1.Speed, ref objPlayer.Attacked1);
+                    objPlayer.Attack(objEnemy1.rctBody, ref objEnemy1.Vida, ref objEnemy1.Speed, ref objPlayer.Attacked1, ref objEnemy1.bool_knockback, ref objEnemy1.knockbackside);
                     //Updatea los Rectangles
                     /*objPlayer.rctSword.Y = (int)objPlayer.Pos.Y + objPlayer.img.Height / 2 - 5;
                     objPlayer.rctSword.X = (int)objPlayer.Pos.X + objPlayer.img.Width;*/
@@ -212,7 +217,6 @@ namespace Apokas
                     //Character
                     PosUpdate(ref objPlayer.rctBody, ref objPlayer.Pos, ref objPlayer.Speed);
                     //Enemigo
-                    PosUpdate(ref objEnemy1.rctBody, ref objEnemy1.Pos, ref objEnemy1.Speed);
                     // DoAttack
                     objPlayer.DoAttack(gameTime);
                     // Room Change
@@ -233,36 +237,35 @@ namespace Apokas
 
             // TODO: Add your drawing code here
 
-            spriteBatch.Begin(SpriteSortMode.BackToFront, BlendState.AlphaBlend); //SpriteSortMode.BackToFront, BlendState.AlphaBlend
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend); //SpriteSortMode.BackToFront, BlendState.AlphaBlend
 
             switch (CurrentGameState)
             {
                 case GameState.MainMenu:
+                    spriteBatch.Draw(Content.Load<Texture2D>("Main Menu"), new Rectangle(0, 0, 1000, 700), Color.White);
                     btnSettings.Draw(spriteBatch);
                     btnPlay.Draw(spriteBatch);
                     btnExit.Draw(spriteBatch);
-                    
-                    spriteBatch.Draw(Content.Load<Texture2D>("Main Menu"), new Rectangle(0, 0, 1000, 700), Color.White);
                     break;
                 case GameState.Playing:
+                    // pasto
+                    spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
                     // Obstaculos
                     spriteBatch.Draw(Roca.img, Roca.Pos, Color.White);
                     spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
-                    //playa
+                    //player
                     if (objPlayer.isAttacking == true)
                         spriteBatch.Draw(objPlayer.imgattack, objPlayer.Pos, Color.White * Opacity);
                     else
                         spriteBatch.Draw(objPlayer.img, objPlayer.Pos, Color.White * Opacity);
-                    //puertas
+
+                    spriteBatch.Draw(objEnemy1.img, objEnemy1.Pos, Color.White);
+                    spriteBatch.Draw(red, new Vector2(objPlayer.rctSword.X, objPlayer.rctSword.Y), Color.White);
+                    //Puertas
                     spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
-
-                    spriteBatch.Draw(objEnemy1.img, objEnemy1.Pos, Color.White);
-                    spriteBatch.Draw(red, new Vector2(objPlayer.rctSword.X, objPlayer.rctSword.Y), Color.White);
-                    spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
-                    
                     break;
                 case GameState.Settings:
                     spriteBatch.Draw(Content.Load<Texture2D>("SettingsMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
