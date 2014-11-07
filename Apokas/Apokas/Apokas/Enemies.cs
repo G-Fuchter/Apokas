@@ -27,7 +27,7 @@ namespace Apokas
         {
             if (knock == false)
             {
-                if (Current_Time > 2.5f && Current_Time < 4f)
+                if (Current_Time > 1.5f && Current_Time < 2.5f)
                 {
                     if (done == false)
                     {
@@ -61,7 +61,7 @@ namespace Apokas
                     if ((EnemyPos.Y > playa.Y - 3 && EnemyPos.Y < playa.Y + 3) && (EnemyPos.X > playa.X - 3 && EnemyPos.X < playa.X + 3))
                         Current_Time = 0.0f;*/
                 }
-                else if (Current_Time > 4f)
+                else if (Current_Time > 2.5f)
                 {
                     Current_Time = 0.0f;
                     done = false;

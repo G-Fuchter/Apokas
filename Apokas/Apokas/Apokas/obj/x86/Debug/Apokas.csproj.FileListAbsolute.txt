@@ -29,8 +29,6 @@ F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
@@ -70,14 +68,6 @@ G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssembl
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 G:\Proyecto copia\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\down_closed.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\down_open.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\left_closed.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\left_open.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\right_closed.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\right_open.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\up_closed.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Skin Walls\up_open.xnb
 F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
 F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
 F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
@@ -218,6 +208,68 @@ G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
 G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
-G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemblyReference.cache
 G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.xnb
 G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma
+F:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\health.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\health.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\DeathMenu.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\QuitButton.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Character.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Enemy1.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\rock.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\right_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\up_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\health.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\DeathMenu.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\QuitButton.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\MyFont.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.xnb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.exe
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Apokas.pdb
+E:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemblyReference.cache
+E:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
+E:\Proyecto\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+E:\Proyecto\Apokas\Apokas\Apokas\bin\x86\Debug\Content\TryButton.xnb

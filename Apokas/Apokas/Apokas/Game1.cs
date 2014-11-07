@@ -41,6 +41,7 @@ namespace Apokas
         SpriteFont font;
         //opacidad
         float Opacity = 1f;
+        bool death = false;
         // enum
         enum GameState
         {
@@ -53,6 +54,9 @@ namespace Apokas
         cButton btnPlay;
         cButton btnSettings;
         cButton btnExit;
+        //death
+        cButton btnQuit;
+        cButton btnTry;
 
         Song GameMusic;
         public Apokas()
@@ -68,6 +72,7 @@ namespace Apokas
 
         protected override void Initialize()
         {
+            
             //Wallskin
             for (int a = 0; a < 4; a++)
                 Wallskin[a] = new Matter();
@@ -88,7 +93,9 @@ namespace Apokas
             //variables
             objPlayer.invencible = false;
             objPlayer.Vida = 10;
-
+            // Rectangle
+            objPlayer.destRectangle = new Rectangle(0, 0, 341, 127);
+            objPlayer.sourceRectange = new Rectangle(0, 0, 341, 127);
             base.Initialize();
         }
 
@@ -108,6 +115,13 @@ namespace Apokas
             //Exit
             btnExit = new cButton(Content.Load<Texture2D>("ExitButton"), graphics.GraphicsDevice);
             btnExit.setPosition(new Vector2(450, 500));
+            //Death
+            btnQuit = new cButton(Content.Load<Texture2D>("QuitButton"), graphics.GraphicsDevice);
+            btnQuit.setPosition(new Vector2(450, 375));
+            // try again
+            btnTry = new cButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
+            btnTry.setPosition(new Vector2(450, 250));
+
 
 
             // Images
@@ -117,6 +131,7 @@ namespace Apokas
             objEnemy1.img = Content.Load<Texture2D>("Enemy1");
             Roca.img = Content.Load<Texture2D>("rock");
             Lago.img = Content.Load<Texture2D>("lago");
+            objPlayer.imgHealth = Content.Load<Texture2D>("health");
             objRoom.LoadWalls(Content, objRoom.leftopen, objRoom.rightopen, objRoom.upopen, objRoom.downopen, LeftWall, RightWall, UpWall, DownWall, Wallskin); //carga los hitboxes tambien
             // Hitbox
             Roca.rct = new Rectangle((int)(Roca.Pos.X), (int)(Roca.Pos.Y), (Roca.img.Width), Roca.img.Height);
@@ -173,8 +188,21 @@ namespace Apokas
                     break;
                 case GameState.Playing:
                     // mouse invisible para el juego
-
                     IsMouseVisible = false;
+                    //death
+                    if (btnQuit.qIsClicked == true) this.Exit();
+                    btnQuit.Update(mouse);
+
+
+                   // ---------------------------------------------------------------------------------------------------------------------------
+                    if (btnQuit.tIsClicked == true)
+                    {
+                        //TRY AGain
+                    }
+                    btnQuit.Update(mouse);
+                    //----------------------------------------------------------------------------------------------------------------------------
+
+
 
                     // Movimiento Jugador
                     objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword);
@@ -210,15 +238,19 @@ namespace Apokas
                     //Vida
                     if (objPlayer.Vida <= 0)
                     {
-                        //objPlayer.Pos = new Vector2(100, 100);
-                        objPlayer.Vida = 10;
+                        death = true;
+                        IsMouseVisible = true;
                     }
+                    //
+                    
                     // Updatea Posicion
                     //Character
                     PosUpdate(ref objPlayer.rctBody, ref objPlayer.Pos, ref objPlayer.Speed);
                     //Enemigo
                     // DoAttack
                     objPlayer.DoAttack(gameTime);
+                    // Vida
+                    objPlayer.Vida_func(objPlayer);
                     // Room Change
                     objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, objEnemy1, LeftWall, RightWall, UpWall, DownWall, Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin);
                     break;
@@ -266,6 +298,16 @@ namespace Apokas
                     spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
+                    //Hud
+                    spriteBatch.Draw(objPlayer.imgHealth, objPlayer.destRectangle, objPlayer.sourceRectange, Color.White);
+
+                    if (death)
+                    {
+                        btnTry.Draw(spriteBatch);
+                        spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
+                        
+                        btnQuit.Draw(spriteBatch);
+                    }
                     break;
                 case GameState.Settings:
                     spriteBatch.Draw(Content.Load<Texture2D>("SettingsMenu"), new Rectangle(0, 0, 1000, 700), Color.White);

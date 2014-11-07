@@ -27,6 +27,10 @@ Content\Main Menu.xnb
 Content\SettingsMenu.xnb
 Content\ExitButton.xnb
 Content\red_square.xnb
+Content\health.xnb
+Content\DeathMenu.xnb
+Content\QuitButton.xnb
 Content\MyFont.xnb
 Content\GameMusic.xnb
 Content\GameMusic.wma
+Content\TryButton.xnb

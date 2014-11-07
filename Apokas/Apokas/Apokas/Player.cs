@@ -26,14 +26,18 @@ namespace Apokas
         public Rectangle rctSword;
         //Else
         public bool invencible = false;
-        public int Vida = 10;
+        public int Vida = 5;
         public bool isAttacking;
         public const float MaxAttackTime = 0.3f;
         public float AttackTime;
         public bool AttackCollision;
         public bool Attacked1 = false;
         // player facing
-        public bool[] face = new bool[4]; 
+        public bool[] face = new bool[4];
+        // Spritebatch
+        public Rectangle destRectangle;
+        public Rectangle sourceRectange;
+        public Texture2D imgHealth;
         
         // Probando invecibilidad
         public float currentTime;
@@ -236,9 +240,33 @@ namespace Apokas
 
             // No intersection found
             return false;
- 
-
-
         }
+
+        //Vida
+        public void Vida_func(Player Jugador)
+        {
+            switch (Vida)
+            { 
+                case 5:
+                    sourceRectange = new Rectangle(0, 0, 341, 127);
+                    break;
+                case 4:
+                    sourceRectange = new Rectangle(0, 0, 682, 127);
+                    break;
+                case 3:
+                    sourceRectange = new Rectangle(0, 0, 1023, 127);
+                    break;
+                case 2:
+                    sourceRectange = new Rectangle(0, 0, 1364, 127);
+                    break;
+                case 1:
+                    sourceRectange = new Rectangle(0, 0, 1705, 127);
+                    break;
+                default:
+                    sourceRectange = new Rectangle(0, 0, 2046, 127);
+                    break;
+
+            }
         }
     }
+}
