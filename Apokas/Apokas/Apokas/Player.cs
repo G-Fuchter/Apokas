@@ -32,6 +32,7 @@ namespace Apokas
         public float AttackTime;
         public bool AttackCollision;
         public bool Attacked1 = false;
+        public bool death = false;
         // player facing
         public bool[] face = new bool[4];
         // Spritebatch
@@ -44,6 +45,7 @@ namespace Apokas
         // objetos
         Enemy1 objEnemy1 = new Enemy1();
         Consola Con = new Consola();
+        Game form1 = new Game();
         /// <summary>
         /// Movimiento, hay 2 vectores, posición y speed. Speed predice donde vas a moverte y
         /// si hay algo, no le agrega nada pos. Si no hay nada le agrega a pos y ahí se mueve
@@ -146,6 +148,8 @@ namespace Apokas
                     opacity = 0.5f; // Reduce la opacidad del enemigo
 
                     inv = true; // lo hace invesible
+
+                    Vida_func(); // Checckea
                 }
             }
             // Si es invencible
@@ -243,29 +247,29 @@ namespace Apokas
         }
 
         //Vida
-        public void Vida_func(Player Jugador)
+        public void Vida_func()
         {
             switch (Vida)
             { 
                 case 5:
-                    sourceRectange = new Rectangle(0, 0, 341, 127);
+                    sourceRectange = new Rectangle(341 * 0, 0, 341, 127);
                     break;
                 case 4:
-                    sourceRectange = new Rectangle(0, 0, 682, 127);
+                    sourceRectange = new Rectangle(341 * 1, 0, 341, 127);
                     break;
                 case 3:
-                    sourceRectange = new Rectangle(0, 0, 1023, 127);
+                    sourceRectange = new Rectangle(341 * 2, 0, 341, 127);
                     break;
                 case 2:
-                    sourceRectange = new Rectangle(0, 0, 1364, 127);
+                    sourceRectange = new Rectangle(341 * 3, 0, 341, 127);
                     break;
                 case 1:
-                    sourceRectange = new Rectangle(0, 0, 1705, 127);
+                    sourceRectange = new Rectangle(341 * 4, 0, 341, 127);
                     break;
                 default:
-                    sourceRectange = new Rectangle(0, 0, 2046, 127);
+                    sourceRectange = new Rectangle(341 * 5, 0, 341, 127);
+                    death = true;
                     break;
-
             }
         }
     }

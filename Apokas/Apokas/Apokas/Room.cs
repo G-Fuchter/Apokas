@@ -114,7 +114,7 @@ namespace Apokas
                     break;
             }
         }
-        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, Enemy1 objEnemy1, Matter Rock, Matter Lago)
+        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, ref Enemy1[] objEnemy1, Matter Rock, Matter Lago, ContentManager Content)
         {
             // Para ver por que puerta viene
             if (lado[0])
@@ -129,49 +129,73 @@ namespace Apokas
             { 
                 case 2:
                     //load room 2 textures and vectors
+                    objEnemy1[0] = new Enemy1();
+                    objEnemy1[0].Pos = new Vector2(100, 200);
                     Rock.Pos = new Vector2(350, 380);
                     Lago.Pos = new Vector2(450, 300);
+                    //Texture data
+                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
+                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
+                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
                     // Hitbox
                     Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1.rctBody = new Rectangle((int)(objEnemy1.Pos.X - objEnemy1.img.Width / 2), (int)(objEnemy1.Pos.Y - objEnemy1.img.Height / 2), objEnemy1.img.Width, objEnemy1.img.Height);
+                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
                     objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
                 case 3:
                     Rock.Pos = new Vector2(350, 380);
                     Lago.Pos = new Vector2(450, 300);
+                    objEnemy1[0] = new Enemy1();
+                    objEnemy1[0].Pos = new Vector2(100, 200);
+                    //Texture data
+                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
+                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
+                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
                     // Hitbox
                     Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1.rctBody = new Rectangle((int)(objEnemy1.Pos.X - objEnemy1.img.Width / 2), (int)(objEnemy1.Pos.Y - objEnemy1.img.Height / 2), objEnemy1.img.Width, objEnemy1.img.Height);
+                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
                     objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
                 case 4:
                     Rock.Pos = new Vector2(350, 380);
                     Lago.Pos = new Vector2(450, 300);
+                    objEnemy1[0] = new Enemy1();
+                    objEnemy1[0].Pos = new Vector2(100, 200);
+                    //Texture data
+                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
+                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
+                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
                     // Hitbox
                     Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1.rctBody = new Rectangle((int)(objEnemy1.Pos.X - objEnemy1.img.Width / 2), (int)(objEnemy1.Pos.Y - objEnemy1.img.Height / 2), objEnemy1.img.Width, objEnemy1.img.Height);
+                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
                     objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
                 case 5:
                     Rock.Pos = new Vector2(350, 380);
                     Lago.Pos = new Vector2(450, 300);
+                    objEnemy1[0] = new Enemy1();
+                    objEnemy1[0].Pos = new Vector2(100, 200);
+                    //Texture data
+                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
+                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
+                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
                     // Hitbox
                     Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1.rctBody = new Rectangle((int)(objEnemy1.Pos.X - objEnemy1.img.Width / 2), (int)(objEnemy1.Pos.Y - objEnemy1.img.Height / 2), objEnemy1.img.Width, objEnemy1.img.Height);
+                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
                     objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
             }
             doors(world, Roomx, Roomy, ref leftopen, ref downopen, ref rightopen, ref upopen);
         }
-        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, Enemy1 objEnemy1, Matter objLeft, Matter objRight, Matter objUp, Matter objDown, Matter Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin)
+        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, ref Enemy1[] objEnemy1, Matter objLeft, Matter objRight, Matter objUp, Matter objDown, Matter Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin)
         {
             if (objPlayer.Pos.X < 4)
             {
@@ -180,8 +204,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = false;
                 rooma -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, objEnemy1, Rock, Pond);
-                doors(mundo, rooma, roomb, ref leftopen, ref downopen, ref rightopen, ref upopen);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             else if (objPlayer.Pos.X > 965)
@@ -191,8 +214,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = false;
                 rooma += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, objEnemy1, Rock, Pond);
-                doors(mundo, rooma, roomb, ref leftopen, ref downopen, ref rightopen, ref upopen);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             if (objPlayer.Pos.Y < 160)
@@ -202,8 +224,7 @@ namespace Apokas
                 lado[2] = true;
                 lado[3] = false;
                 roomb -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, objEnemy1, Rock, Pond);
-                doors(mundo, rooma, roomb, ref leftopen, ref downopen, ref rightopen, ref upopen);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             else if (objPlayer.Pos.Y > 620)
@@ -214,8 +235,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = true;
                 roomb += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, objEnemy1, Rock, Pond);
-                doors(mundo, rooma, roomb, ref leftopen, ref downopen, ref rightopen, ref upopen);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
         }

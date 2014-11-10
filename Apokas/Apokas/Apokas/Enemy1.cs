@@ -13,8 +13,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Apokas
 {
-    public class Enemy1 : Enemies
+    public class Enemy1
     {
+        //Objetos
+        //Player ObjPlayer = new Player();
         public Color[] textureData;
         // bla
         public Texture2D img;
@@ -23,7 +25,7 @@ namespace Apokas
         public Rectangle rctBody;
         public int Damage = 1; // daño
         public int Vel = 2; // vel
-        public int Vida = 10; // vida
+        public int Vida = 5; // vida
         public bool bool_knockback; // si actúa el knockback
         public string knockbackside; // De donde le pegan
         bool once = true; // funcion knockback
@@ -31,9 +33,15 @@ namespace Apokas
         Vector2 cuadratica = new Vector2(0,0);
         Consola con = new Consola();
 
-        public void knockback(bool knockie)
+        //AI
+        Vector2 playa = new Vector2();
+        float Current_Time;
+        float m, b;
+        bool done;
+
+        public void knockback()
         {
-            if (knockie) // si le pegaron
+            if (bool_knockback) // si le pegaron
             {
                 if (once) // se ejecuta solo la primer a vez
                 {
@@ -90,6 +98,49 @@ namespace Apokas
             }
             else
                 once = true;
+        }
+
+        public void AI(Vector2 PlayerSpeed, Vector2 PlayerPos, GameTime gameTime)
+        {
+            if (bool_knockback == false)
+            {
+                if (Current_Time > 1.5f && Current_Time < 2.5f)
+                {
+                    if (done == false)
+                    {
+                        done = true;
+                        playa = PlayerPos;
+                        m = (Pos.Y - playa.Y) / (Pos.X - playa.X);
+                        b = m * Pos.X;
+                        b = Pos.Y - b;
+                    }
+                    // Checkea si su pos.x es menor o mayor y se autocorrige
+                    if (Pos.X < playa.X - 3)
+                    {
+                        Pos.X += 7;
+                        Pos.Y = m * Pos.X + b;
+                    }
+                    else if (Pos.X > playa.X + 3)
+                    {
+                        Pos.X += -7;
+                        Pos.Y = m * Pos.X + b;
+                    }
+                }
+                else if (Current_Time > 2.5f)
+                {
+                    Current_Time = 0.0f;
+                    done = false;
+                }
+                Current_Time += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+            else
+                Current_Time = 0f;
+        }
+
+        public void Update (GameTime gameTime, Player jugador)
+        {
+            knockback();
+            AI(jugador.Speed, jugador.Pos,gameTime);
         }
     }
 }
