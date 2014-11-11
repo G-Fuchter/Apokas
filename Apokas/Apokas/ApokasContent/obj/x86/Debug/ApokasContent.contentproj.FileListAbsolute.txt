@@ -1,4 +1,3 @@
-F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
 F:\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache
 G:\Proyecto copia\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
 F:\Guillermo Fuchter\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache
@@ -6,3 +5,4 @@ G:\Guillermo Fuchter\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveA
 C:\Documents and Settings\41394728\Escritorio\Guillermo Fuchter\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache
 G:\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
 G:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
+F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache

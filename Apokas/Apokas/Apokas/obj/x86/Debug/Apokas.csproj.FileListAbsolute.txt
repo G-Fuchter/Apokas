@@ -11,9 +11,6 @@ F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\character_attack.x
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\red_square.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\lago.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\HbFondo.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\blank.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\button.xnb
-F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemblyReference.cache
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_closed.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\down_open.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Walls\left_closed.xnb
@@ -272,3 +269,24 @@ G:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojResolveAssemb
 G:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 G:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 G:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\down_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\left_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\right_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_closed.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SkinWalls\up_open.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Grass.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\PlayButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Menu.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\SettingsMenu.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\ExitButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\health.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\DeathMenu.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\QuitButton.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.xnb
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\TryButton.xnb

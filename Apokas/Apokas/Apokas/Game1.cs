@@ -112,6 +112,8 @@ namespace Apokas
             //Death
             btnQuit = new cButton(Content.Load<Texture2D>("QuitButton"), graphics.GraphicsDevice);
             btnQuit.setPosition(new Vector2(450, 450));
+            btnTry = new cButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
+            btnTry.setPosition(new Vector2(450, 350));
 
             // Images
             red = Content.Load<Texture2D>("red_square"); 
@@ -164,8 +166,10 @@ namespace Apokas
 
                 case GameState.Playing: // Ingame
                     // mouse invisible para el juego
-                    IsMouseVisible = false;
-
+                    if (objPlayer.death == false)
+                    {
+                        IsMouseVisible = false;
+                    }
                     // ENEMIGOS
                     for (int a = 0; a < 3; a++) // 3 enemigos
                     {
@@ -182,19 +186,22 @@ namespace Apokas
                         }
                     }
 
-                    //ROCAS
-                    for (int a = 0; a < 3; a++)
-                    {
-                        if (Roca[a] != null)
-                        {
-                            objConosla.cout("sex", null, null, null);
-                            Roca[a].CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
-                        }
-                    }
-
+                    
                         //death
-                    if (btnQuit.qIsClicked == true) this.Exit();
-                    btnQuit.Update(mouse);
+                    if (objPlayer.death)
+                    {
+                        IsMouseVisible = true;
+
+                        if (btnQuit.qIsClicked == true) this.Exit();
+                        
+
+                        if (btnTry.tIsClicked == true)
+                        {
+                            // TRY AGAIN
+                        }
+                        btnTry.Update(mouse);
+
+                    }
 
                     // Movimiento Jugador
                     objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword);
@@ -210,6 +217,16 @@ namespace Apokas
                     // Collision Matter
                     //Lago
                     Lago.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+
+                    //ROCAS
+                    for (int a = 0; a < 4; a++)
+                    {
+                        if (Roca[a] != null)
+                        {
+                            Roca[a].CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                        }
+                    }
+
 
                     //walls
                     LeftWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
@@ -260,6 +277,7 @@ namespace Apokas
                         if (Roca[a] != null)
                         {
                             spriteBatch.Draw(Roca[a].img, Roca[a].Pos, Color.White);
+                            spriteBatch.Draw(red, new Vector2(Roca[a].rct.X, Roca[a].rct.Y), Color.White);
                         }
                     }
                     spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
@@ -296,8 +314,9 @@ namespace Apokas
                     if (objPlayer.death)
                     {
                         spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
-                        IsMouseVisible = true;
                         btnQuit.Draw(spriteBatch);
+                        btnTry.Draw(spriteBatch);
+                       
                     }
 
                     //TEXTO

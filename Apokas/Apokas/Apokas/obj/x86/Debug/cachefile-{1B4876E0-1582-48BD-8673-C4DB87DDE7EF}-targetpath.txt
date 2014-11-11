@@ -33,3 +33,4 @@ Content\QuitButton.xnb
 Content\MyFont.xnb
 Content\GameMusic.xnb
 Content\GameMusic.wma
+Content\TryButton.xnb

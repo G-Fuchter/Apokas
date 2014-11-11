@@ -18,12 +18,13 @@ namespace Apokas
         //Classes
         //World
         public int[,] world = new int[6, 6];
-        public bool[,] Enemies = new bool[6, 6];
+        public bool[,] Clear = new bool[6, 6];
         int enemies;
         public int Roomx;
         public int Roomy;
         public bool leftopen, downopen, rightopen, upopen;
         bool[] lado = new bool[4]; // Lado en que entra
+        Random rnd = new Random();
 
         //World function
         public void worldgenerate(ref int[,] mundo)
@@ -129,6 +130,8 @@ namespace Apokas
                 objPlayer.Pos = new Vector2(435, 200);
             objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
             objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
+            int enemyx = rnd.Next(100, 800);
+            int enemyy = rnd.Next(100, 500);
 
             switch (mundo[rooma, roomb])
             {
@@ -138,7 +141,7 @@ namespace Apokas
                     //------------//
 
                 case 2:
-                    // Rocas
+
                     // ROCAS
                     Rock[0] = new Matter();
                     Rock[1] = new Matter();
@@ -147,7 +150,7 @@ namespace Apokas
                     //POSICION
                     Rock[0].Pos = new Vector2(0, 380);
                     Rock[1].Pos = new Vector2(950, 380);
-                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[2].Pos = new Vector2(435, 150);
                     Rock[3].Pos = new Vector2(435, 650);
                     for (int a = 0; a < 4; a++)
                     {
@@ -158,15 +161,17 @@ namespace Apokas
                     }
                     // Enemigos
                     objEnemy1[0] = new Enemy1();
-                    for (int a = 0; a < 1; a++)
+                    objEnemy1[1] = new Enemy1();
+                    // Posiciones
+                    objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
+                    objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
+                    for (int a = 0; a < 2; a++)
                     {
                         objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
                         objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
                         objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                         objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                     }
-                    // Posiciones
-                    objEnemy1[0].Pos = new Vector2(100, 200);
                     Lago.Pos = new Vector2(435, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
@@ -185,7 +190,7 @@ namespace Apokas
                     //POSICION
                     Rock[0].Pos = new Vector2(0, 380);
                     Rock[1].Pos = new Vector2(950, 380);
-                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[2].Pos = new Vector2(435, 150);
                     Rock[3].Pos = new Vector2(435, 650);
                     for (int a = 0; a < 4; a++)
                     {
@@ -196,6 +201,8 @@ namespace Apokas
                     }
                     // Enemigos
                     objEnemy1[0] = new Enemy1();
+                    // Posiciones
+                    objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
                     for (int a = 0; a < 1; a++)
                     {
                         objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
@@ -203,8 +210,6 @@ namespace Apokas
                         objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                         objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                     }
-                    // Posiciones
-                    objEnemy1[0].Pos = new Vector2(100, 200);
                     Lago.Pos = new Vector2(435, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
@@ -223,7 +228,7 @@ namespace Apokas
                     //POSICION
                     Rock[0].Pos = new Vector2(0, 380);
                     Rock[1].Pos = new Vector2(950, 380);
-                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[2].Pos = new Vector2(435, 150);
                     Rock[3].Pos = new Vector2(435, 650);
                     for (int a = 0; a < 4; a++)
                     {
@@ -234,15 +239,19 @@ namespace Apokas
                     }
                     // Enemigos
                     objEnemy1[0] = new Enemy1();
-                    for (int a = 0; a < 1; a++)
+                    objEnemy1[1] = new Enemy1();
+                    objEnemy1[2] = new Enemy1();
+                    // Posiciones
+                    objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
+                    objEnemy1[1].Pos = new Vector2(enemyx, enemyy);
+                    objEnemy1[2].Pos = new Vector2(enemyx, enemyy);
+                    for (int a = 0; a < 3; a++)
                     {
                         objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
                         objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
                         objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                         objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                     }
-                    // Posiciones
-                    objEnemy1[0].Pos = new Vector2(100, 200);
                     Lago.Pos = new Vector2(435, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
@@ -261,7 +270,7 @@ namespace Apokas
                     //POSICION
                     Rock[0].Pos = new Vector2(0, 380);
                     Rock[1].Pos = new Vector2(950, 380);
-                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[2].Pos = new Vector2(435, 150);
                     Rock[3].Pos = new Vector2(435, 650);
                     for (int a = 0; a < 4; a++)
                     {
@@ -272,15 +281,17 @@ namespace Apokas
                     }
                     // Enemigos
                     objEnemy1[0] = new Enemy1();
-                    for (int a = 0; a < 1; a++)
+                    objEnemy1[1] = new Enemy1();
+                    // Posiciones
+                    objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
+                    objEnemy1[1].Pos = new Vector2(enemyx, enemyy);
+                    for (int a = 0; a < 2; a++)
                     {
                         objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
                         objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
                         objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                         objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                     }
-                    // Posiciones
-                    objEnemy1[0].Pos = new Vector2(100, 200);
                     Lago.Pos = new Vector2(435, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);

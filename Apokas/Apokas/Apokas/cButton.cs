@@ -55,7 +55,7 @@ namespace Apokas
 
         public bool eIsClicked;
         public bool qIsClicked;
-
+        public bool tIsClicked;
         public void Update(MouseState mouse)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y);
