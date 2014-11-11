@@ -36,8 +36,8 @@ namespace Apokas
         // player facing
         public bool[] face = new bool[4];
         // Spritebatch
-        public Rectangle destRectangle;
-        public Rectangle sourceRectange;
+        public Rectangle HuddestRectangle;
+        public Rectangle HudsourceRectange;
         public Texture2D imgHealth;
         
         // Probando invecibilidad
@@ -139,6 +139,7 @@ namespace Apokas
         {
             if (IntersectPixels(Player, dataplayer, Enemy, dataenemy) == true) // cuando el jugador collisiona con enemigo
             {
+                Con.cout("Interseccion!!!", null, null, null);
                 if (inv == false) // Si es invecible no hace daño
                 {
                     Speed = new Vector2(0, 0); //atraviesa enemigos
@@ -154,7 +155,8 @@ namespace Apokas
             }
             // Si es invencible
             if (inv == true)
-            { 
+            {
+                isAttacking = false;
                 current += (float)gameTime.ElapsedGameTime.TotalSeconds;
                 if (current >= 2f)
                 {
@@ -167,14 +169,13 @@ namespace Apokas
 
 
         //Funcion de ATAQUE
-        public void Attack(Rectangle rctenemy,ref int vidaenemy, ref Vector2 speedenemy, ref bool attackedonce, ref bool knock, ref string knockside)
+        public void Attack(Rectangle rctenemy,ref int vidaenemy, ref bool attackedonce, ref bool knock, ref string knockside)
         {
             if (rctSword.Intersects(rctenemy)) // intersecta la espada con el enemigo
             {
                 if (isAttacking == true && attackedonce == false) // El usuario apreto space
                 {
                      vidaenemy -= 1;
-                     speedenemy = new Vector2(0, 0);
                      attackedonce = true;
                     //knocback
                      knock = true;
@@ -252,22 +253,22 @@ namespace Apokas
             switch (Vida)
             { 
                 case 5:
-                    sourceRectange = new Rectangle(341 * 0, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 0, 0, 341, 127);
                     break;
                 case 4:
-                    sourceRectange = new Rectangle(341 * 1, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 1, 0, 341, 127);
                     break;
                 case 3:
-                    sourceRectange = new Rectangle(341 * 2, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 2, 0, 341, 127);
                     break;
                 case 2:
-                    sourceRectange = new Rectangle(341 * 3, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 3, 0, 341, 127);
                     break;
                 case 1:
-                    sourceRectange = new Rectangle(341 * 4, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 4, 0, 341, 127);
                     break;
                 default:
-                    sourceRectange = new Rectangle(341 * 5, 0, 341, 127);
+                    HudsourceRectange = new Rectangle(341 * 5, 0, 341, 127);
                     death = true;
                     break;
             }

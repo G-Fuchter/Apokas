@@ -18,6 +18,8 @@ namespace Apokas
         //Classes
         //World
         public int[,] world = new int[6, 6];
+        public bool[,] Enemies = new bool[6, 6];
+        int enemies;
         public int Roomx;
         public int Roomy;
         public bool leftopen, downopen, rightopen, upopen;
@@ -114,88 +116,179 @@ namespace Apokas
                     break;
             }
         }
-        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, ref Enemy1[] objEnemy1, Matter Rock, Matter Lago, ContentManager Content)
+        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, ref Enemy1[] objEnemy1, ref Matter[] Rock, Matter Lago, ContentManager Content)
         {
             // Para ver por que puerta viene
             if (lado[0])
-                objPlayer.Pos = new Vector2(930, 380);
+                objPlayer.Pos = new Vector2(900, 380);
             else if (lado[1])
-                objPlayer.Pos = new Vector2(60, 380);
+                objPlayer.Pos = new Vector2(100, 380);
             else if (lado[2])
                 objPlayer.Pos = new Vector2(435, 600);
             else if (lado[3])
                 objPlayer.Pos = new Vector2(435, 200);
+            objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
+            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
+
             switch (mundo[rooma, roomb])
-            { 
+            {
+
+                    //------------//
+                    //--CUARTO 2--//
+                    //------------//
+
                 case 2:
-                    //load room 2 textures and vectors
+                    // Rocas
+                    // ROCAS
+                    Rock[0] = new Matter();
+                    Rock[1] = new Matter();
+                    Rock[2] = new Matter();
+                    Rock[3] = new Matter();
+                    //POSICION
+                    Rock[0].Pos = new Vector2(0, 380);
+                    Rock[1].Pos = new Vector2(950, 380);
+                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[3].Pos = new Vector2(435, 650);
+                    for (int a = 0; a < 4; a++)
+                    {
+                        Rock[a].img = Content.Load<Texture2D>("rock");
+                        Rock[a].rct = new Rectangle((int)(Rock[a].Pos.X), (int)(Rock[a].Pos.Y), (Rock[a].img.Width), Rock[a].img.Height);
+                        Rock[a].data = new Color[Rock[a].img.Width * Rock[a].img.Height];
+                        Rock[a].img.GetData(Rock[a].data);
+                    }
+                    // Enemigos
                     objEnemy1[0] = new Enemy1();
+                    for (int a = 0; a < 1; a++)
+                    {
+                        objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
+                        objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                        objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
+                        objEnemy1[a].img.GetData(objEnemy1[a].textureData);
+                    }
+                    // Posiciones
                     objEnemy1[0].Pos = new Vector2(100, 200);
-                    Rock.Pos = new Vector2(350, 380);
-                    Lago.Pos = new Vector2(450, 300);
-                    //Texture data
-                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
-                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
-                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
+                    Lago.Pos = new Vector2(435, 300);
                     // Hitbox
-                    Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
-                    objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
-                    objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
+
+                    //------------//
+                    //--CUARTO 3--//
+                    //------------//
+
                 case 3:
-                    Rock.Pos = new Vector2(350, 380);
-                    Lago.Pos = new Vector2(450, 300);
+                    // ROCAS
+                    Rock[0] = new Matter();
+                    Rock[1] = new Matter();
+                    Rock[2] = new Matter();
+                    Rock[3] = new Matter();
+                    //POSICION
+                    Rock[0].Pos = new Vector2(0, 380);
+                    Rock[1].Pos = new Vector2(950, 380);
+                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[3].Pos = new Vector2(435, 650);
+                    for (int a = 0; a < 4; a++)
+                    {
+                        Rock[a].img = Content.Load<Texture2D>("rock");
+                        Rock[a].rct = new Rectangle((int)(Rock[a].Pos.X), (int)(Rock[a].Pos.Y), (Rock[a].img.Width), Rock[a].img.Height);
+                        Rock[a].data = new Color[Rock[a].img.Width * Rock[a].img.Height];
+                        Rock[a].img.GetData(Rock[a].data);
+                    }
+                    // Enemigos
                     objEnemy1[0] = new Enemy1();
+                    for (int a = 0; a < 1; a++)
+                    {
+                        objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
+                        objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                        objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
+                        objEnemy1[a].img.GetData(objEnemy1[a].textureData);
+                    }
+                    // Posiciones
                     objEnemy1[0].Pos = new Vector2(100, 200);
-                    //Texture data
-                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
-                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
-                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
+                    Lago.Pos = new Vector2(435, 300);
                     // Hitbox
-                    Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
-                    objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
-                    objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
+
+                    //------------//
+                    //--CUARTO 4--//
+                    //------------//
+
                 case 4:
-                    Rock.Pos = new Vector2(350, 380);
-                    Lago.Pos = new Vector2(450, 300);
+                    // ROCAS
+                    Rock[0] = new Matter();
+                    Rock[1] = new Matter();
+                    Rock[2] = new Matter();
+                    Rock[3] = new Matter();
+                    //POSICION
+                    Rock[0].Pos = new Vector2(0, 380);
+                    Rock[1].Pos = new Vector2(950, 380);
+                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[3].Pos = new Vector2(435, 650);
+                    for (int a = 0; a < 4; a++)
+                    {
+                        Rock[a].img = Content.Load<Texture2D>("rock");
+                        Rock[a].rct = new Rectangle((int)(Rock[a].Pos.X), (int)(Rock[a].Pos.Y), (Rock[a].img.Width), Rock[a].img.Height);
+                        Rock[a].data = new Color[Rock[a].img.Width * Rock[a].img.Height];
+                        Rock[a].img.GetData(Rock[a].data);
+                    }
+                    // Enemigos
                     objEnemy1[0] = new Enemy1();
+                    for (int a = 0; a < 1; a++)
+                    {
+                        objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
+                        objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                        objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
+                        objEnemy1[a].img.GetData(objEnemy1[a].textureData);
+                    }
+                    // Posiciones
                     objEnemy1[0].Pos = new Vector2(100, 200);
-                    //Texture data
-                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
-                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
-                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
+                    Lago.Pos = new Vector2(435, 300);
                     // Hitbox
-                    Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
-                    objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
-                    objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
+
+                    //------------//
+                    //--CUARTO 5--//
+                    //------------//
+
                 case 5:
-                    Rock.Pos = new Vector2(350, 380);
-                    Lago.Pos = new Vector2(450, 300);
+                    // ROCAS
+                    Rock[0] = new Matter();
+                    Rock[1] = new Matter();
+                    Rock[2] = new Matter();
+                    Rock[3] = new Matter();
+                    //POSICION
+                    Rock[0].Pos = new Vector2(0, 380);
+                    Rock[1].Pos = new Vector2(950, 380);
+                    Rock[2].Pos = new Vector2(435, 50);
+                    Rock[3].Pos = new Vector2(435, 650);
+                    for (int a = 0; a < 4; a++)
+                    {
+                        Rock[a].img = Content.Load<Texture2D>("rock");
+                        Rock[a].rct = new Rectangle((int)(Rock[a].Pos.X), (int)(Rock[a].Pos.Y), (Rock[a].img.Width), Rock[a].img.Height);
+                        Rock[a].data = new Color[Rock[a].img.Width * Rock[a].img.Height];
+                        Rock[a].img.GetData(Rock[a].data);
+                    }
+                    // Enemigos
                     objEnemy1[0] = new Enemy1();
+                    for (int a = 0; a < 1; a++)
+                    {
+                        objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
+                        objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                        objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
+                        objEnemy1[a].img.GetData(objEnemy1[a].textureData);
+                    }
+                    // Posiciones
                     objEnemy1[0].Pos = new Vector2(100, 200);
-                    //Texture data
-                    objEnemy1[0].img = Content.Load<Texture2D>("Enemy1");
-                    objEnemy1[0].textureData = new Color[objEnemy1[0].img.Width * objEnemy1[0].img.Height];
-                    objEnemy1[0].img.GetData(objEnemy1[0].textureData);
+                    Lago.Pos = new Vector2(435, 300);
                     // Hitbox
-                    Rock.rct = new Rectangle((int)(Rock.Pos.X), (int)(Rock.Pos.Y), (Rock.img.Width), Rock.img.Height);
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
-                    objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
-                    objEnemy1[0].rctBody = new Rectangle((int)(objEnemy1[0].Pos.X - objEnemy1[0].img.Width / 2), (int)(objEnemy1[0].Pos.Y - objEnemy1[0].img.Height / 2), objEnemy1[0].img.Width, objEnemy1[0].img.Height);
-                    objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
                     break;
             }
             doors(world, Roomx, Roomy, ref leftopen, ref downopen, ref rightopen, ref upopen);
         }
-        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, ref Enemy1[] objEnemy1, Matter objLeft, Matter objRight, Matter objUp, Matter objDown, Matter Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin)
+        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, ref Enemy1[] objEnemy1,Matter objLeft, Matter objRight, Matter objUp, Matter objDown, ref Matter[] Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin)
         {
             if (objPlayer.Pos.X < 4)
             {
@@ -204,7 +297,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = false;
                 rooma -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             else if (objPlayer.Pos.X > 965)
@@ -214,7 +307,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = false;
                 rooma += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, ref Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             if (objPlayer.Pos.Y < 160)
@@ -224,7 +317,7 @@ namespace Apokas
                 lado[2] = true;
                 lado[3] = false;
                 roomb -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             else if (objPlayer.Pos.Y > 620)
@@ -235,7 +328,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = true;
                 roomb += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
         }

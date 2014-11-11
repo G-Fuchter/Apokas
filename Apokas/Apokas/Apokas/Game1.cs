@@ -21,7 +21,7 @@ namespace Apokas
         // objeto
         Consola objConosla = new Consola();
         Matter Lago = new Matter();
-        Matter Roca = new Matter();
+        Matter[] Roca = new Matter [4];
         Matter LeftWall = new Matter();
         Matter RightWall = new Matter();
         Matter UpWall = new Matter();
@@ -81,15 +81,13 @@ namespace Apokas
                 //Character
             objPlayer.Speed = new Vector2(0.0f, 0.0f);
             objPlayer.Pos = new Vector2(200, 200);
-                //Rock
-            Roca.Pos = new Vector2(450, 250);
                 //Lago
             Lago.Pos = new Vector2(400, 400);
             //variables
             objPlayer.invencible = false;
             // Rectangle
-            objPlayer.destRectangle = new Rectangle(0, 0, 341, 127);
-            objPlayer.sourceRectange = new Rectangle(341 * 0, 0, 341, 127);
+            objPlayer.HuddestRectangle = new Rectangle(0, 0, 341, 127);
+            objPlayer.HudsourceRectange = new Rectangle(341 * 0, 0, 341, 127);
             //mouse
             Mouse.WindowHandle = Window.Handle;
             base.Initialize();
@@ -119,19 +117,17 @@ namespace Apokas
             red = Content.Load<Texture2D>("red_square"); 
             objPlayer.imgattack = Content.Load<Texture2D>("character_attack");
             objPlayer.img = Content.Load<Texture2D>("Character");
-            Roca.img = Content.Load<Texture2D>("rock");
             Lago.img = Content.Load<Texture2D>("lago");
             objPlayer.imgHealth = Content.Load<Texture2D>("health");
             objRoom.LoadWalls(Content, objRoom.leftopen, objRoom.rightopen, objRoom.upopen, objRoom.downopen, LeftWall, RightWall, UpWall, DownWall, Wallskin); //carga los hitboxes tambien
+            //hitbox
+            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
             //Font
             font = Content.Load<SpriteFont>("MyFont");
             // Collision data
                 //player
             objPlayer.textureData = new Color[objPlayer.img.Width * objPlayer.img.Height];
             objPlayer.img.GetData(objPlayer.textureData);
-                //rock
-            Roca.data = new Color[Roca.img.Width * Roca.img.Height];
-            Roca.img.GetData(Roca.data);
                 //lago
             Lago.data = new Color[Lago.img.Width * Lago.img.Height];
             Lago.img.GetData(Lago.data);
@@ -170,15 +166,29 @@ namespace Apokas
                     // mouse invisible para el juego
                     IsMouseVisible = false;
 
+                    // ENEMIGOS
                     for (int a = 0; a < 3; a++) // 3 enemigos
                     {
                         if (objEnemy1[a] != null)
                         {
-                            objPlayer.Attack(objEnemy1[a].rctBody, ref objEnemy1[a].Vida, ref objEnemy1[a].Speed, ref objPlayer.Attacked1, ref objEnemy1[a].bool_knockback, ref objEnemy1[a].knockbackside);
-                            objPlayer.CollisionCharacters(objPlayer.rctBody, objEnemy1[a].rctBody, ref objPlayer.Vida, objEnemy1[a].Speed, ref Opacity, objEnemy1[a], objEnemy1[a].Damage, ref objPlayer.currentTime, ref objPlayer.invencible, gameTime, objPlayer.textureData, objEnemy1[a].textureData);
+                            objPlayer.CollisionCharacters(objPlayer.rctBody, objEnemy1[a].rctBody, ref objPlayer.Vida, objPlayer.Speed, ref Opacity, objEnemy1[a], objEnemy1[a].Damage, ref objPlayer.currentTime, ref objPlayer.invencible, gameTime, objPlayer.textureData, objEnemy1[a].textureData);
+                            objPlayer.Attack(objEnemy1[a].rctBody, ref objEnemy1[a].Vida, ref objPlayer.Attacked1, ref objEnemy1[a].bool_knockback, ref objEnemy1[a].knockbackside);
+                            objPlayer.DoAttack(gameTime);
                             objEnemy1[a].Update(gameTime, objPlayer);
+                            objEnemy1[a].rctBody.X = (int)objEnemy1[a].Pos.X + (int)objEnemy1[a].Speed.X;
+                            objEnemy1[a].rctBody.Y = (int)objEnemy1[a].Pos.Y + (int)objEnemy1[a].Speed.Y;
                             if (objEnemy1[a].Vida <= 0)
                                 objEnemy1[a] = null;
+                        }
+                    }
+
+                    //ROCAS
+                    for (int a = 0; a < 3; a++)
+                    {
+                        if (Roca[a] != null)
+                        {
+                            objConosla.cout("sex", null, null, null);
+                            Roca[a].CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                         }
                     }
 
@@ -192,14 +202,15 @@ namespace Apokas
                     //Updatea los Rectangles
                     objPlayer.rctBody.X = (int)objPlayer.Pos.X + (int)objPlayer.Speed.X;
                     objPlayer.rctBody.Y = (int)objPlayer.Pos.Y + (int)objPlayer.Speed.Y;
+
                     // Para que no se vaya de la pantalla
                     if (!GraphicsDevice.Viewport.Bounds.Contains(objPlayer.rctBody))
                         objPlayer.Speed = new Vector2(0, 0);
+
                     // Collision Matter
-                    //Rock
-                    Roca.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                     //Lago
                     Lago.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+
                     //walls
                     LeftWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
                     RightWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
@@ -207,15 +218,11 @@ namespace Apokas
                     DownWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
 
                     // Updatea Posicion
-                    //Character
                     PosUpdate(ref objPlayer.rctBody, ref objPlayer.Pos, ref objPlayer.Speed);
-                    //Enemigo
-                    // DoAttack
-                    objPlayer.DoAttack(gameTime);
-                    // Vida
-                    //objPlayer.Vida_func(objPlayer);
-                    // Room Change
-                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, ref objEnemy1, LeftWall, RightWall, UpWall, DownWall, Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin);
+
+                    // Cambio de cuarto
+                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, ref objEnemy1, LeftWall, RightWall, UpWall, DownWall,ref Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin);
+
                     break;
                 case GameState.Settings:
                     // poner el back buton
@@ -243,16 +250,27 @@ namespace Apokas
                     btnExit.Draw(spriteBatch);
                     break;
                 case GameState.Playing:
-                    // pasto
+                    // PASTO
                     spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
+
                     // Obstaculos
-                    spriteBatch.Draw(Roca.img, Roca.Pos, Color.White);
+                        //ROCA
+                    for (int a = 0; a < 4; a++)
+                    {
+                        if (Roca[a] != null)
+                        {
+                            spriteBatch.Draw(Roca[a].img, Roca[a].Pos, Color.White);
+                        }
+                    }
                     spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
-                    //player
+
+                    //JUGADOR
                     if (objPlayer.isAttacking == true)
                         spriteBatch.Draw(objPlayer.imgattack, objPlayer.Pos, Color.White * Opacity);
                     else
                         spriteBatch.Draw(objPlayer.img, objPlayer.Pos, Color.White * Opacity);
+
+                    // Enemigos
                     for (int a = 0; a < 3; a++) // Dibujando enemigos
                     {
                         if (objEnemy1[a] != null)
@@ -260,21 +278,31 @@ namespace Apokas
                             spriteBatch.Draw(objEnemy1[a].img, objEnemy1[a].Pos, Color.White);
                         }
                     }
+
+                    // TEST ESPADA
                     spriteBatch.Draw(red, new Vector2(objPlayer.rctSword.X, objPlayer.rctSword.Y), Color.White);
-                    //Puertas
+                    spriteBatch.Draw(red, new Vector2(objPlayer.rctBody.X, objPlayer.rctBody.Y), Color.White);
+
+                    //PUERTAS
                     spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
                     spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
-                    //Hud
-                    spriteBatch.Draw(objPlayer.imgHealth, objPlayer.destRectangle, objPlayer.sourceRectange, Color.White);
+
+                    //HUD
+                    spriteBatch.Draw(objPlayer.imgHealth, objPlayer.HuddestRectangle, objPlayer.HudsourceRectange, Color.White);
+
+                    // MUERTE
                     if (objPlayer.death)
                     {
                         spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
                         IsMouseVisible = true;
                         btnQuit.Draw(spriteBatch);
                     }
+
+                    //TEXTO
                     DrawText();
+
                     break;
                 case GameState.Settings:
                     spriteBatch.Draw(Content.Load<Texture2D>("SettingsMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
