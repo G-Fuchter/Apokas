@@ -30,7 +30,7 @@ Content\red_square.xnb
 Content\health.xnb
 Content\DeathMenu.xnb
 Content\QuitButton.xnb
+Content\TryButton.xnb
 Content\MyFont.xnb
 Content\GameMusic.xnb
 Content\GameMusic.wma
-Content\TryButton.xnb

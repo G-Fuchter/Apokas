@@ -74,7 +74,7 @@ namespace Apokas
             //Wallskin
             for (int a = 0; a < 4; a++)
                 Wallskin[a] = new Matter();
-            objRoom.worldgenerate(ref objRoom.world);
+            objRoom.worldgenerate(ref objRoom.world,ref objRoom.Clear);
             objRoom.Roomselect(ref objRoom.Roomx, ref objRoom.Roomy, objRoom.world);
             objRoom.doors(objRoom.world, objRoom.Roomx, objRoom.Roomy, ref objRoom.leftopen, ref objRoom.downopen, ref objRoom.rightopen, ref objRoom.upopen);
             // Vectors
@@ -182,7 +182,10 @@ namespace Apokas
                             objEnemy1[a].rctBody.X = (int)objEnemy1[a].Pos.X + (int)objEnemy1[a].Speed.X;
                             objEnemy1[a].rctBody.Y = (int)objEnemy1[a].Pos.Y + (int)objEnemy1[a].Speed.Y;
                             if (objEnemy1[a].Vida <= 0)
+                            {
                                 objEnemy1[a] = null;
+                                objRoom.enemies -= 1;
+                            }
                         }
                     }
 
@@ -193,14 +196,22 @@ namespace Apokas
                         IsMouseVisible = true;
 
                         if (btnQuit.qIsClicked == true) this.Exit();
-                        
 
                         if (btnTry.tIsClicked == true)
                         {
                             // TRY AGAIN
                         }
                         btnTry.Update(mouse);
+                    }
 
+                    // Clear
+                    if (objRoom.enemies == 0)
+                    {
+                        objRoom.Clear[objRoom.Roomx, objRoom.Roomy] = true;
+                        Roca[0] = null;
+                        Roca[1] = null;
+                        Roca[2] = null;
+                        Roca[3] = null;
                     }
 
                     // Movimiento Jugador

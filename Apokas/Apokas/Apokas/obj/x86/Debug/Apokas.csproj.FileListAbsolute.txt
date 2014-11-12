@@ -290,3 +290,4 @@ F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.xnb
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\ResolveAssemblyReference.cache
 F:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\TryButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\TryButton.xnb
