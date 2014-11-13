@@ -317,6 +317,15 @@
       <Extra>C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\GameMusic.wma</Extra>
       <Time>2014-11-12T18:46:49.2787365-03:00</Time>
     </Item>
+    <Item>
+      <Source>BackButton.png</Source>
+      <Name>BackButton</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\BackButton.xnb</Output>
+      <Time>2014-11-11T20:39:28-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

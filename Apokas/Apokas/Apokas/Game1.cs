@@ -48,7 +48,8 @@ namespace Apokas
             Settings,
             Playing,
         }
-        GameState CurrentGameState = GameState.MainMenu;
+        GameState CurrentGameState;
+        
 
         cButton btnPlay;
         cButton btnSettings;
@@ -56,6 +57,7 @@ namespace Apokas
         //death
         bButton btnQuit;
         bButton btnTry;
+        bButton btnBack;
 
         Song GameMusic;
         public Apokas()
@@ -72,6 +74,8 @@ namespace Apokas
         protected override void Initialize()
         {
             //Wallskin
+          CurrentGameState = GameState.MainMenu;
+
             for (int a = 0; a < 4; a++)
                 Wallskin[a] = new Matter();
             objRoom.worldgenerate(ref objRoom.world,ref objRoom.Clear);
@@ -114,6 +118,8 @@ namespace Apokas
             btnQuit.setPosition(new Vector2(400, 350));
             btnTry = new bButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
             btnTry.setPosition(new Vector2(100, 100));
+            btnBack = new bButton(Content.Load<Texture2D>("BackButton"), graphics.GraphicsDevice);
+            btnBack.setPosition(new Vector2(800, 500));
 
             // Images
             red = Content.Load<Texture2D>("red_square"); 
@@ -191,8 +197,12 @@ namespace Apokas
                         IsMouseVisible = true;
                         if (btnQuit.IsClicked == true) this.Exit();
                         btnQuit.Update(mouse);
-                        
-                        
+
+                        if (btnTry.IsClicked == true)
+                        {
+
+                        }
+                        btnTry.Update(mouse);
 
                     }
                     
@@ -246,6 +256,9 @@ namespace Apokas
 
                     break;
                 case GameState.Settings:
+
+                    if (btnBack.IsClicked == true) CurrentGameState = GameState.MainMenu;
+                    btnBack.Update(mouse);
                     // poner el back buton
                     break;
             }
@@ -330,6 +343,7 @@ namespace Apokas
                     break;
                 case GameState.Settings:
                     spriteBatch.Draw(Content.Load<Texture2D>("SettingsMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
+                    btnBack.Draw(spriteBatch);
                     break;
             }
             spriteBatch.End();

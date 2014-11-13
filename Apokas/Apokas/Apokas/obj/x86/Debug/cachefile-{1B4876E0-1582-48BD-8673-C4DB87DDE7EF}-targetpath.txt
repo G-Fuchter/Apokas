@@ -34,3 +34,4 @@ Content\TryButton.xnb
 Content\MyFont.xnb
 Content\GameMusic.xnb
 Content\GameMusic.wma
+Content\BackButton.xnb

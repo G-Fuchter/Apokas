@@ -333,3 +333,4 @@ C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.csprojR
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
+C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\BackButton.xnb
