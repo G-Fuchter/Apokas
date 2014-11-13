@@ -32,7 +32,7 @@ namespace Apokas
         public float AttackTime;
         public bool AttackCollision;
         public bool Attacked1 = false;
-        public bool death = false;
+        public bool death;
         // player facing
         public bool[] face = new bool[4];
         // Spritebatch

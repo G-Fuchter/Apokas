@@ -54,8 +54,8 @@ namespace Apokas
         cButton btnSettings;
         cButton btnExit;
         //death
-        cButton btnQuit;
-        cButton btnTry;
+        bButton btnQuit;
+        bButton btnTry;
 
         Song GameMusic;
         public Apokas()
@@ -110,10 +110,10 @@ namespace Apokas
             btnExit = new cButton(Content.Load<Texture2D>("ExitButton"), graphics.GraphicsDevice);
             btnExit.setPosition(new Vector2(450, 500));
             //Death
-            btnQuit = new cButton(Content.Load<Texture2D>("QuitButton"), graphics.GraphicsDevice);
-            btnQuit.setPosition(new Vector2(450, 450));
-            btnTry = new cButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
-            btnTry.setPosition(new Vector2(450, 350));
+            btnQuit = new bButton(Content.Load<Texture2D>("QuitButton"), graphics.GraphicsDevice);
+            btnQuit.setPosition(new Vector2(400, 350));
+            btnTry = new bButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
+            btnTry.setPosition(new Vector2(100, 100));
 
             // Images
             red = Content.Load<Texture2D>("red_square"); 
@@ -165,11 +165,6 @@ namespace Apokas
                     break;
 
                 case GameState.Playing: // Ingame
-                    // mouse invisible para el juego
-                    if (objPlayer.death == false)
-                    {
-                        IsMouseVisible = false;
-                    }
                     // ENEMIGOS
                     for (int a = 0; a < 3; a++) // 3 enemigos
                     {
@@ -192,17 +187,15 @@ namespace Apokas
                     
                         //death
                     if (objPlayer.death)
-                    {
+                    {                       
                         IsMouseVisible = true;
+                        if (btnQuit.IsClicked == true) this.Exit();
+                        btnQuit.Update(mouse);
+                        
+                        
 
-                        if (btnQuit.qIsClicked == true) this.Exit();
-
-                        if (btnTry.tIsClicked == true)
-                        {
-                            // TRY AGAIN
-                        }
-                        btnTry.Update(mouse);
                     }
+                    
 
                     // Clear
                     if (objRoom.enemies == 0)
@@ -325,9 +318,10 @@ namespace Apokas
                     if (objPlayer.death)
                     {
                         spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
-                        btnQuit.Draw(spriteBatch);
                         btnTry.Draw(spriteBatch);
-                       
+                        btnQuit.Draw(spriteBatch);
+                        
+                        
                     }
 
                     //TEXTO

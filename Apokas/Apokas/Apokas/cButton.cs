@@ -37,18 +37,6 @@ namespace Apokas
             size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
 
         }
-        /*public void SettingsButton(Texture2D newTexture, GraphicsDevice graphics)
-        {
-            sTexture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 700
-            size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
-
-        }
-        public void eButton(Texture2D newTexture, GraphicsDevice graphics)
-        {
-            eTexture = newTexture; //ScreenWidth = 1000 ; ScreenHeight = 700
-            size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 14); // divido el viewport para cuando se cambie la resolucion, los valores se mantengan
-
-        }*/
         public bool IsClicked;
 
         public bool sIsClicked;
@@ -56,6 +44,8 @@ namespace Apokas
         public bool eIsClicked;
         public bool qIsClicked;
         public bool tIsClicked;
+
+
         public void Update(MouseState mouse)
         {
             rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X, (int)size.Y);

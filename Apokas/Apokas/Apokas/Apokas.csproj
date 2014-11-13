@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bButton.cs" />
     <Compile Include="cButton.cs" />
     <Compile Include="Consola.cs" />
     <Compile Include="Enemy1.cs" />
