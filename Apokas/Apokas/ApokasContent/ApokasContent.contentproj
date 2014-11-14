@@ -204,13 +204,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SettingsMenu.png">
-      <Name>SettingsMenu</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ExitButton.png">
       <Name>ExitButton</Name>
       <Importer>TextureImporter</Importer>
@@ -290,6 +283,20 @@
   <ItemGroup>
     <Compile Include="healthpack.png">
       <Name>healthpack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SettingsMenu.jpg">
+      <Name>SettingsMenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="endgame.png">
+      <Name>endgame</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

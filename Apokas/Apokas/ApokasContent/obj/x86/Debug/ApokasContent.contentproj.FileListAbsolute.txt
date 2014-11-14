@@ -7,3 +7,4 @@ G:\Proyecto\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojR
 G:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
 F:\Proyecto\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache
+E:\SockCliente\Apokas\Apokas\Apokas\ApokasContent\obj\x86\Debug\ApokasContent.contentprojResolveAssemblyReference.cache

@@ -54,14 +54,16 @@ namespace Apokas
             Playing,
         }
         GameState CurrentGameState;
-        
+
+
+        Texture2D win;
+        public bool Nuwanda = false;
 
         cButton btnPlay;
         cButton btnSettings;
         cButton btnExit;
         //death
         bButton btnQuit;
-        bButton btnTry;
         bButton btnBack;
 
         Song GameMusic;
@@ -108,6 +110,7 @@ namespace Apokas
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // BOTONES
+            win = Content.Load<Texture2D>("endgame");
             //mainMenu
             IsMouseVisible = true;
             btnPlay = new cButton(Content.Load<Texture2D>("PlayButton"), graphics.GraphicsDevice);
@@ -120,9 +123,7 @@ namespace Apokas
             btnExit.setPosition(new Vector2(450, 500));
             //Death
             btnQuit = new bButton(Content.Load<Texture2D>("QuitButton"), graphics.GraphicsDevice);
-            btnQuit.setPosition(new Vector2(400, 350));
-            btnTry = new bButton(Content.Load<Texture2D>("TryButton"), graphics.GraphicsDevice);
-            btnTry.setPosition(new Vector2(100, 100));
+            btnQuit.setPosition(new Vector2(450, 350));
             btnBack = new bButton(Content.Load<Texture2D>("BackButton"), graphics.GraphicsDevice);
             btnBack.setPosition(new Vector2(800, 500));
 
@@ -170,8 +171,8 @@ namespace Apokas
                 case GameState.MainMenu:
                     if (btnPlay.IsClicked == true) CurrentGameState = GameState.Playing;
                     btnPlay.Update(mouse);
-                    //MediaPlayer.Play(GameMusic); // Activa la canción
-                    //MediaPlayer.IsRepeating = true;
+                    MediaPlayer.Play(GameMusic); // Activa la canción
+                    MediaPlayer.IsRepeating = true;
                     if (btnSettings.sIsClicked == true) CurrentGameState = GameState.Settings;
                     btnSettings.Update(mouse);
                     if (btnExit.eIsClicked == true) this.Exit();
@@ -206,11 +207,6 @@ namespace Apokas
                         if (btnQuit.IsClicked == true) this.Exit();
                         btnQuit.Update(mouse);
 
-                        if (btnTry.IsClicked == true)
-                        {
-
-                        }
-                        btnTry.Update(mouse);
                     }
                     
 
@@ -252,9 +248,10 @@ namespace Apokas
                     if (Memory != null)
                     {
                         Memory.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
-                        if (Memory.win >= 4)
+                        if (Memory.win >= 2)
                         {
-                            //Gana juego
+                            Nuwanda = true;
+
                         }
                         if (Memory.counter == 1)
                         {
@@ -319,64 +316,72 @@ namespace Apokas
                     break;
                 case GameState.Playing:
                     // PASTO
-                    spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
+                    if (Nuwanda)
+                    {
 
-                    // Obstaculos
+                        spriteBatch.Draw(win, new Rectangle(0, 0, 1000, 700), Color.White);
+                    }
+                    else
+                    {
+                        spriteBatch.Draw(Content.Load<Texture2D>("Grass"), new Vector2(0, 0), Color.White);
+
+                        // Obstaculos
+
                         //ROCA
-                    for (int a = 0; a < 4; a++)
-                    {
-                        if (Roca[a] != null)
+                        for (int a = 0; a < 4; a++)
                         {
-                            spriteBatch.Draw(Roca[a].img, Roca[a].Pos, Color.White);
+                            if (Roca[a] != null)
+                            {
+                                spriteBatch.Draw(Roca[a].img, Roca[a].Pos, Color.White);
+                            }
                         }
-                    }
-                    // Laguito
-                    spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
+                        // Laguito
+                        spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
 
-                    //Healthpack
-                    if (Healthpack != null)
-                    {
-                        spriteBatch.Draw(Healthpack.img, Healthpack.Pos, Color.White);
-                    }
-
-                    //Memory
-                    if (Memory != null)
-                    {
-                        spriteBatch.Draw(Memory.img, Memory.Pos, Color.White);
-                    }
-
-                    //PLAYER
-                    spriteBatch.Draw(objPlayer.img, objPlayer.Pos, objPlayer.sourceRectangle, Color.White * Opacity);
-
-                    // Enemigos
-                    for (int a = 0; a < 3; a++) // Dibujando enemigos
-                    {
-                        if (objEnemy1[a] != null)
+                        //Healthpack
+                        if (Healthpack != null)
                         {
-                            spriteBatch.Draw(objEnemy1[a].img, objEnemy1[a].Pos, objEnemy1[a].sourceRectangle, Color.White);
+                            spriteBatch.Draw(Healthpack.img, Healthpack.Pos, Color.White);
                         }
+
+                        //Memory
+                        if (Memory != null)
+                        {
+                            spriteBatch.Draw(Memory.img, Memory.Pos, Color.White);
+                        }
+
+                        //PLAYER
+                        spriteBatch.Draw(objPlayer.img, objPlayer.Pos, objPlayer.sourceRectangle, Color.White * Opacity);
+
+                        // Enemigos
+                        for (int a = 0; a < 3; a++) // Dibujando enemigos
+                        {
+                            if (objEnemy1[a] != null)
+                            {
+                                spriteBatch.Draw(objEnemy1[a].img, objEnemy1[a].Pos, objEnemy1[a].sourceRectangle, Color.White);
+                            }
+                        }
+
+
+                        //PUERTAS
+                        spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
+                        spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
+                        spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
+                        spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
+
+                        //HUD
+                        spriteBatch.Draw(objPlayer.imgHealth, objPlayer.HuddestRectangle, objPlayer.HudsourceRectange, Color.White);
+
+                        // MUERTE
+                        if (objPlayer.death)
+                        {
+                            spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
+                            btnQuit.Draw(spriteBatch);
+                        }
+
+                        //TEXTO
+                        DrawText();
                     }
-
-
-                    //PUERTAS
-                    spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(Wallskin[0].img, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(Wallskin[1].img, new Vector2(0, 0), Color.White);
-                    spriteBatch.Draw(Wallskin[3].img, new Vector2(0, 0), Color.White);
-
-                    //HUD
-                    spriteBatch.Draw(objPlayer.imgHealth, objPlayer.HuddestRectangle, objPlayer.HudsourceRectange, Color.White);
-
-                    // MUERTE
-                    if (objPlayer.death)
-                    {
-                        spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
-                        btnTry.Draw(spriteBatch);
-                        btnQuit.Draw(spriteBatch);
-                    }
-
-                    //TEXTO
-                    DrawText();
 
                     break;
                 case GameState.Settings:

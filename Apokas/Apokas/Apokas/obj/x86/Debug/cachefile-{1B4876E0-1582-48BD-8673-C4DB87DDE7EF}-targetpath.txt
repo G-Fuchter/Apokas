@@ -24,7 +24,6 @@ Content\Grass.xnb
 Content\SettingsButton.xnb
 Content\PlayButton.xnb
 Content\Main Menu.xnb
-Content\SettingsMenu.xnb
 Content\ExitButton.xnb
 Content\red_square.xnb
 Content\health.xnb
@@ -32,10 +31,12 @@ Content\DeathMenu.xnb
 Content\QuitButton.xnb
 Content\TryButton.xnb
 Content\BackButton.xnb
-Content\MyFont.xnb
-Content\GameMusic.xnb
-Content\GameMusic.wma
 Content\Main Character.xnb
 Content\Fantasmita.xnb
 Content\Io.xnb
 Content\healthpack.xnb
+Content\SettingsMenu.xnb
+Content\endgame.xnb
+Content\MyFont.xnb
+Content\GameMusic.xnb
+Content\GameMusic.wma

@@ -33,7 +33,7 @@ namespace Apokas
         public bButton(Texture2D newTexture, GraphicsDevice graphics)
         {
             mTexture = newTexture;
-            mSize = new Vector2(200,200);
+            mSize = new Vector2(100,50);
         }
         
         public void Update(MouseState mouse)
