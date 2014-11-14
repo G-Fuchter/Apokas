@@ -31,7 +31,11 @@ Content\health.xnb
 Content\DeathMenu.xnb
 Content\QuitButton.xnb
 Content\TryButton.xnb
+Content\BackButton.xnb
 Content\MyFont.xnb
 Content\GameMusic.xnb
 Content\GameMusic.wma
-Content\BackButton.xnb
+Content\Main Character.xnb
+Content\Fantasmita.xnb
+Content\Io.xnb
+Content\healthpack.xnb

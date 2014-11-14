@@ -23,9 +23,10 @@ namespace Apokas
         public Vector2 Pos;
         public Vector2 Speed;
         public Rectangle rctBody;
+        public Rectangle sourceRectangle;
         public int Damage = 1; // daño
         public int Vel = 2; // vel
-        public int Vida = 5; // vida
+        public int Vida = 2; // vida
         public bool bool_knockback; // si actúa el knockback
         public string knockbackside; // De donde le pegan
         bool once = true; // funcion knockback
@@ -38,6 +39,9 @@ namespace Apokas
         float Current_Time;
         float m, b;
         bool done;
+
+        //animation counter
+        public float ani_counter;
 
         public void knockback()
         {
@@ -125,22 +129,45 @@ namespace Apokas
                         Pos.X += -7;
                         Pos.Y = m * Pos.X + b;
                     }
+                    animacion(gameTime, 5 * 82, ref sourceRectangle, ref ani_counter);
                 }
                 else if (Current_Time > 2.5f)
                 {
                     Current_Time = 0.0f;
                     done = false;
                 }
+                else
+                    animacion(gameTime, 0, ref sourceRectangle, ref ani_counter);
                 Current_Time += (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
             else
+            {
+                sourceRectangle = new Rectangle(82 * 4, 0, 82, 135);
                 Current_Time = 0f;
+            }
         }
 
         public void Update (GameTime gameTime, Player jugador)
         {
             knockback();
             AI(jugador.Speed, jugador.Pos,gameTime);
+        }
+
+        public void animacion(GameTime gametime, int a, ref Rectangle source, ref float anicounter)
+        {
+            anicounter += (float)gametime.ElapsedGameTime.TotalSeconds;
+            if (anicounter > 0.1f && anicounter < 0.2f)
+            {
+                source = new Rectangle(a, 0, 82, 135);
+            }
+            else if (anicounter > 0.2f && anicounter < 0.3f)
+            {
+                source = new Rectangle(a + 82 , 0, 82, 135);
+            }
+            else if (anicounter > 0.3f)
+            {
+                anicounter = 0f;
+            }
         }
     }
 }

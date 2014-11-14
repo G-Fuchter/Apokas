@@ -334,3 +334,8 @@ C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Microsoft.Xna.
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.exe
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\obj\x86\Debug\Apokas.pdb
 C:\Users\EQUIPO\Desktop\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\BackButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\BackButton.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Main Character.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Fantasmita.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\Io.xnb
+G:\Proyecto\Apokas\Apokas\Apokas\Apokas\bin\x86\Debug\Content\healthpack.xnb

@@ -16,6 +16,7 @@ namespace Apokas
     public class Room
     {
         //Classes
+
         //World
         public int[,] world = new int[6, 6];
         public bool[,] Clear = new bool[6, 6];
@@ -118,21 +119,23 @@ namespace Apokas
                     break;
             }
         }
-        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, ref Enemy1[] objEnemy1, ref Matter[] Rock, Matter Lago, ContentManager Content)
+        public void RoomLoad(int[,] mundo, int rooma, int roomb, Player objPlayer, ref Enemy1[] objEnemy1, ref Matter[] Rock, Matter Lago, ContentManager Content, ref Matter Memory, ref Matter Healthpack)
         {
             // Para ver por que puerta viene
             if (lado[0])
-                objPlayer.Pos = new Vector2(900, 380);
+                objPlayer.Pos = new Vector2(850, 330);
             else if (lado[1])
-                objPlayer.Pos = new Vector2(100, 380);
+                objPlayer.Pos = new Vector2(110, 330);
             else if (lado[2])
-                objPlayer.Pos = new Vector2(435, 600);
+                objPlayer.Pos = new Vector2(435, 500);
             else if (lado[3])
                 objPlayer.Pos = new Vector2(435, 200);
-            objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + objPlayer.img.Width), (int)(objPlayer.Pos.Y), 10, 10);
-            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
+            objPlayer.rctSword = new Rectangle((int)(objPlayer.Pos.X + 85), (int)(objPlayer.Pos.Y), 10, 10);
+            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X), (int)(objPlayer.Pos.Y), 85, 127);
             int enemyx = rnd.Next(100, 800);
             int enemyy = rnd.Next(100, 500);
+            int memo = rnd.Next(0, 10);
+            int healthpack = rnd.Next(0, 10);
 
             switch (mundo[rooma, roomb])
             {
@@ -143,7 +146,7 @@ namespace Apokas
 
                 case 2:
                     // ROCAS
-                    if (Clear[rooma, roomb] == false) //Si está vacio
+                    if (Clear[rooma, roomb] == false) //Si no está vacio
                     {
                         Rock[0] = new Matter();
                         Rock[1] = new Matter();
@@ -173,14 +176,35 @@ namespace Apokas
                         objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
                         for (int a = 0; a < 2; a++)
                         {
-                            objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
-                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                            objEnemy1[a].img = Content.Load<Texture2D>("Fantasmita");
+                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X), (int)(objEnemy1[a].Pos.Y), 82, 135);
                             objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                             objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                         }
+
+                        //Vida y Memo
+                        if (memo > 4)
+                        {
+                            Memory = new Matter();
+                            Memory.Pos = new Vector2(100,400);
+                            Memory.img = Content.Load<Texture2D>("Io");
+                            Memory.rct = new Rectangle((int)Memory.Pos.X, (int)Memory.Pos.Y, Memory.img.Width, Memory.img.Height);
+                            Memory.data = new Color[Memory.img.Width * Memory.img.Height];
+                            Memory.img.GetData(Memory.data);
+                        }
+                        if (healthpack > 4)
+                        {
+                            Healthpack = new Matter();
+                            Healthpack.Pos = new Vector2(120, 340);
+                            Healthpack.Damage = -1;
+                            Healthpack.img = Content.Load<Texture2D>("healthpack");
+                            Healthpack.rct = new Rectangle((int)Healthpack.Pos.X, (int)Healthpack.Pos.Y, Healthpack.img.Width, Healthpack.img.Height);
+                            Healthpack.data = new Color[Healthpack.img.Width * Healthpack.img.Height];
+                            Healthpack.img.GetData(Healthpack.data);
+                        }
                     }
                     
-                    Lago.Pos = new Vector2(435, 300);
+                    Lago.Pos = new Vector2(550, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     break;
@@ -217,13 +241,36 @@ namespace Apokas
                         objEnemy1[0].Pos = new Vector2(enemyx, enemyy);
                         for (int a = 0; a < 1; a++)
                         {
-                            objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
-                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                            objEnemy1[a].img = Content.Load<Texture2D>("Fantasmita");
+                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X), (int)(objEnemy1[a].Pos.Y), 82, 135);
                             objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                             objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                         }
+
+                        //Vida y Memo
+                        if (memo > 4)
+                        {
+                            Memory = new Matter();
+                            Memory.Pos = new Vector2(100, 400);
+                            Memory.img = Content.Load<Texture2D>("Io");
+                            Memory.rct = new Rectangle((int)Memory.Pos.X, (int)Memory.Pos.Y, Memory.img.Width, Memory.img.Height);
+                            Memory.data = new Color[Memory.img.Width * Memory.img.Height];
+                            Memory.img.GetData(Memory.data);
+                        }
+                        if (healthpack > 4)
+                        {
+                            Healthpack = new Matter();
+                            Healthpack.Pos = new Vector2(120, 340);
+                            Healthpack.Damage = -1;
+                            Healthpack.img = Content.Load<Texture2D>("healthpack");
+                            Healthpack.rct = new Rectangle((int)Healthpack.Pos.X, (int)Healthpack.Pos.Y, Healthpack.img.Width, Healthpack.img.Height);
+                            Healthpack.data = new Color[Healthpack.img.Width * Healthpack.img.Height];
+                            Healthpack.img.GetData(Healthpack.data);
+                        }
                     }
-                    Lago.Pos = new Vector2(435, 300);
+
+
+                    Lago.Pos = new Vector2(550, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     break;
@@ -268,13 +315,36 @@ namespace Apokas
                         objEnemy1[2].Pos = new Vector2(enemyx, enemyy);
                         for (int a = 0; a < 3; a++)
                         {
-                            objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
-                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                            objEnemy1[a].img = Content.Load<Texture2D>("Fantasmita");
+                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X), (int)(objEnemy1[a].Pos.Y), 82, 135);
+                            objEnemy1[a].sourceRectangle = new Rectangle(a + 82 * 2, 0, 82, 135);
                             objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                             objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                         }
+
+                        //Vida y Memo
+                        if (memo > 4)
+                        {
+                            Memory = new Matter();
+                            Memory.Pos = new Vector2(100, 400);
+                            Memory.img = Content.Load<Texture2D>("Io");
+                            Memory.rct = new Rectangle((int)Memory.Pos.X, (int)Memory.Pos.Y, Memory.img.Width, Memory.img.Height);
+                            Memory.data = new Color[Memory.img.Width * Memory.img.Height];
+                            Memory.img.GetData(Memory.data);
+                        }
+                        if (healthpack > 4)
+                        {
+                            Healthpack = new Matter();
+                            Healthpack.Pos = new Vector2(120, 340);
+                            Healthpack.Damage = -1;
+                            Healthpack.img = Content.Load<Texture2D>("healthpack");
+                            Healthpack.rct = new Rectangle((int)Healthpack.Pos.X, (int)Healthpack.Pos.Y, Healthpack.img.Width, Healthpack.img.Height);
+                            Healthpack.data = new Color[Healthpack.img.Width * Healthpack.img.Height];
+                            Healthpack.img.GetData(Healthpack.data);
+                        }
+
                     }
-                    Lago.Pos = new Vector2(435, 300);
+                    Lago.Pos = new Vector2(550, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     break;
@@ -315,20 +385,41 @@ namespace Apokas
                         objEnemy1[1].Pos = new Vector2(enemyx, enemyy);
                         for (int a = 0; a < 2; a++)
                         {
-                            objEnemy1[a].img = Content.Load<Texture2D>("Enemy1");
-                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X - objEnemy1[a].img.Width / 2), (int)(objEnemy1[a].Pos.Y - objEnemy1[a].img.Height / 2), objEnemy1[a].img.Width, objEnemy1[a].img.Height);
+                            objEnemy1[a].img = Content.Load<Texture2D>("Fantasmita");
+                            objEnemy1[a].rctBody = new Rectangle((int)(objEnemy1[a].Pos.X), (int)(objEnemy1[a].Pos.Y), 82, 135);
                             objEnemy1[a].textureData = new Color[objEnemy1[a].img.Width * objEnemy1[a].img.Height];
                             objEnemy1[a].img.GetData(objEnemy1[a].textureData);
                         }
+
+                        //Vida y Memo
+                        if (memo > 4)
+                        {
+                            Memory = new Matter();
+                            Memory.Pos = new Vector2(100, 400);
+                            Memory.img = Content.Load<Texture2D>("Io");
+                            Memory.rct = new Rectangle((int)Memory.Pos.X, (int)Memory.Pos.Y, Memory.img.Width, Memory.img.Height);
+                            Memory.data = new Color[Memory.img.Width * Memory.img.Height];
+                            Memory.img.GetData(Memory.data);
+                        }
+                        if (healthpack > 4)
+                        {
+                            Healthpack = new Matter();
+                            Healthpack.Pos = new Vector2(120, 340);
+                            Healthpack.Damage = -1;
+                            Healthpack.img = Content.Load<Texture2D>("healthpack");
+                            Healthpack.rct = new Rectangle((int)Healthpack.Pos.X, (int)Healthpack.Pos.Y, Healthpack.img.Width, Healthpack.img.Height);
+                            Healthpack.data = new Color[Healthpack.img.Width * Healthpack.img.Height];
+                            Healthpack.img.GetData(Healthpack.data);
+                        }
                     }
-                    Lago.Pos = new Vector2(435, 300);
+                    Lago.Pos = new Vector2(550, 300);
                     // Hitbox
                     Lago.rct = new Rectangle((int)(Lago.Pos.X), (int)(Lago.Pos.Y), (Lago.img.Width), Lago.img.Height);
                     break;
             }
             doors(world, Roomx, Roomy, ref leftopen, ref downopen, ref rightopen, ref upopen);
         }
-        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, ref Enemy1[] objEnemy1,Matter objLeft, Matter objRight, Matter objUp, Matter objDown, ref Matter[] Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin)
+        public void RoomChange(ref int[,] mundo, ref int rooma, ref int roomb, Player objPlayer, ref Enemy1[] objEnemy1,Matter objLeft, Matter objRight, Matter objUp, Matter objDown, ref Matter[] Rock, Matter Pond , ref bool left, ref bool right, ref bool up, ref bool down, ContentManager Content, Matter[] skin, ref Matter memo, ref Matter health)
         {
             if (objPlayer.Pos.X < 4)
             {
@@ -337,17 +428,17 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = false;
                 rooma -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content, ref memo, ref health);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
-            else if (objPlayer.Pos.X > 965)
+            else if (objPlayer.Pos.X > 905)
             {
                 lado[0] = false;
                 lado[1] = true;
                 lado[2] = false;
                 lado[3] = false;
                 rooma += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, ref Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, ref Rock, Pond, Content, ref memo, ref health);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
             if (objPlayer.Pos.Y < 160)
@@ -357,10 +448,10 @@ namespace Apokas
                 lado[2] = true;
                 lado[3] = false;
                 roomb -= 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, ref Rock, Pond, Content, ref memo, ref health);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
-            else if (objPlayer.Pos.Y > 620)
+            else if (objPlayer.Pos.Y > 550)
             {
                 // De que lado entra
                 lado[0] = false;
@@ -368,7 +459,7 @@ namespace Apokas
                 lado[2] = false;
                 lado[3] = true;
                 roomb += 1;
-                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1,ref Rock, Pond, Content);
+                RoomLoad(mundo, rooma, roomb, objPlayer, ref objEnemy1, ref Rock, Pond, Content, ref memo, ref health);
                 LoadWalls(Content, left, right, up, down, objLeft, objRight, objUp, objDown, skin);
             }
         }

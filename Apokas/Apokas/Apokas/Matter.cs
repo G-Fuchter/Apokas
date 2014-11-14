@@ -25,33 +25,8 @@ namespace Apokas
         public Vector2 Pos;
         public Rectangle rct;
         public int Damage = 0;
-        // Lago
-       /* public Color[] dataLago;
-        public Texture2D imgLago;
-        public Vector2 PosLago;
-        public Rectangle rctLago;
-        public int DamageLago = 0;
-        // Walls
-            // left open
-        public Color[] dataLeft;
-        public Rectangle rctLeft;
-        public Texture2D imgLeft;
-            //right open
-        public Color[] dataRight;
-        public Rectangle rctRight;
-        public Texture2D imgRight;
-            // up open
-        public Color[] dataUp;
-        public Rectangle rctUp;
-        public Texture2D imgUp;
-            //down open
-        public Color[] dataDown;
-        public Rectangle rctDown;
-        public Texture2D imgDown;
-        // Fondo
-        public Texture2D imgFondo;
-        // Entrada
-        */
+        public int counter = 0;
+        public int win = 0;
 
         
         public void CollisionwPlayer(ref Vector2 speed, Rectangle rctCharacter, ref int vida, Color[] dataCharacter)
@@ -60,6 +35,8 @@ namespace Apokas
             {
                 speed = new Vector2(0, 0);
                 vida -= Damage;
+                counter += 1;
+                win += 1;
             }
         }
     }

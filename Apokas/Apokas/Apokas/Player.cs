@@ -23,6 +23,7 @@ namespace Apokas
         public Vector2 Speed;
         //Rectangles
         public Rectangle rctBody;
+        public Rectangle sourceRectangle;
         public Rectangle rctSword;
         //Else
         public bool invencible = false;
@@ -39,6 +40,9 @@ namespace Apokas
         public Rectangle HuddestRectangle;
         public Rectangle HudsourceRectange;
         public Texture2D imgHealth;
+
+        // Animation counter
+        float countframes;
         
         // Probando invecibilidad
         public float currentTime;
@@ -46,19 +50,38 @@ namespace Apokas
         Enemy1 objEnemy1 = new Enemy1();
         Consola Con = new Consola();
         Game form1 = new Game();
+        KeyboardState oldstate;
         /// <summary>
         /// Movimiento, hay 2 vectores, posición y speed. Speed predice donde vas a moverte y
         /// si hay algo, no le agrega nada pos. Si no hay nada le agrega a pos y ahí se mueve
         /// el personaje.
         /// </summary>
-        public void Control(ref bool IsAttacking, ref Rectangle rctSwordo)
+        public void Control(ref bool IsAttacking, ref Rectangle rctSwordo, GameTime gametime)
         {
+            var newState = Keyboard.GetState();
             //Ataque
-            if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.Space))
+            if (newState.IsKeyDown(Keys.Space))
             {
                 if (AttackTime <= 0.0f)
                 {
                     isAttacking = true;
+                    if (face[0])
+                    {
+                        sourceRectangle = new Rectangle(85 * 5, 147, 85, 147);
+                    }
+                    else if (face[1])
+                    {
+                        sourceRectangle = new Rectangle(85 * 7, 147, 85, 147);
+                    }
+                    else if (face[2])
+                    {
+                        sourceRectangle = new Rectangle(85 * 3, 147, 85, 147);
+                    }
+                    else if (face[3])
+                    {
+                        sourceRectangle = new Rectangle(85 * 1, 147, 85, 147);
+                    }
+
                     AttackTime = MaxAttackTime;
 
                 }
@@ -80,11 +103,12 @@ namespace Apokas
                 face[2] = false;
                 face[3] = false;
                 rctSwordo.X = (int)Pos.X - rctSwordo.Width;
-                rctSwordo.Y = (int)Pos.Y + img.Height / 2;
+                rctSwordo.Y = (int)Pos.Y + 147 / 2;
                 if (run == true)
                     Speed.X = -6;
                 else
                     Speed.X = -3;
+                Animacion(gametime, ref countframes, ref sourceRectangle,85 * 6, 0);
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.D))
             {
@@ -93,13 +117,14 @@ namespace Apokas
                 face[1] = true;
                 face[2] = false;
                 face[3] = false;
-                rctSwordo.X = (int)Pos.X + img.Width;
-                rctSwordo.Y = (int)Pos.Y + img.Height / 2;
+                rctSwordo.X = (int)Pos.X + 85;
+                rctSwordo.Y = (int)Pos.Y + 147 / 2;
                 //sprint
                 if (run == true)
                     Speed.X = 6;
                 else
                     Speed.X = 3;
+                Animacion(gametime, ref countframes, ref sourceRectangle, 85 * 9, 0);
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.S))
             {
@@ -108,13 +133,14 @@ namespace Apokas
                 face[1] = false;
                 face[2] = false;
                 face[3] = true;
-                rctSwordo.X = (int)Pos.X + img.Width/2;
-                rctSwordo.Y = (int)Pos.Y + img.Height;
+                rctSwordo.X = (int)Pos.X + 85/2;
+                rctSwordo.Y = (int)Pos.Y + 147;
                 //Sprint
                 if (run == true)
                     Speed.Y = 6;
                 else
                     Speed.Y = 3;
+                Animacion(gametime, ref countframes, ref sourceRectangle, 85 * 0, 0);
             }
             if (Keyboard.GetState(PlayerIndex.One).IsKeyDown(Keys.W))
             {
@@ -123,13 +149,14 @@ namespace Apokas
                 face[1] = false;
                 face[2] = true;
                 face[3] = false;
-                rctSwordo.X = (int)Pos.X + img.Width / 2;
-                rctSwordo.Y = (int)Pos.Y - rctSwordo.Height;
+                rctSwordo.X = (int)Pos.X + 85 / 2;
+                rctSwordo.Y = (int)Pos.Y - 30;
                 //sprint
                 if (run == true)
                     Speed.Y = -6;
                 else
                     Speed.Y = -3;
+                Animacion(gametime, ref countframes, ref sourceRectangle, 85 * 3, 0);
             }
         }
 
@@ -205,6 +232,7 @@ namespace Apokas
                 {
                     isAttacking = false;
                     Attacked1 = false;
+                    sourceRectangle = new Rectangle(85, 0, 85, 147);
                 }
             }
                 else
@@ -252,6 +280,9 @@ namespace Apokas
         {
             switch (Vida)
             { 
+                case 6:
+                    Vida = 5;
+                    break;
                 case 5:
                     HudsourceRectange = new Rectangle(341 * 0, 0, 341, 127);
                     break;
@@ -271,6 +302,32 @@ namespace Apokas
                     HudsourceRectange = new Rectangle(341 * 5, 0, 341, 127);
                     death = true;
                     break;
+            }
+        }
+
+        //Animation
+        public void Animacion(GameTime gameTime, ref float contador, ref Rectangle source, int a, int b)
+        {
+            contador += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (contador > 0.1f && contador < 0.2f)
+            {
+                source = new Rectangle(a, b, 85, 147);
+            }
+            else if (contador >0.2f && contador < 0.3f)
+            {
+                source = new Rectangle(a + 85, b, 85, 147);
+            }
+            else if (contador > 0.3f && contador < 0.4f)
+            {
+                source = new Rectangle(a + 85 * 2, b, 85, 147);
+            }
+            else if (contador > 0.4f && contador < 0.5f)
+            {
+                source = new Rectangle(a + 85, b, 85, 147);
+            }
+            else if (contador > 0.5f)
+            {
+                contador = 0f;
             }
         }
     }

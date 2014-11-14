@@ -27,12 +27,17 @@ namespace Apokas
         Matter UpWall = new Matter();
         Matter DownWall = new Matter();
         Matter[] Wallskin = new Matter[4];
+        Matter Healthpack;
+        Matter Memory;
         Player objPlayer = new Player();
         Enemy1[] objEnemy1 = new Enemy1 [3];
         Room objRoom = new Room();
 
         //Testing
         Texture2D red;
+
+        //Ganar
+        public int Ganador = 0;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -124,16 +129,17 @@ namespace Apokas
             // Images
             red = Content.Load<Texture2D>("red_square"); 
             objPlayer.imgattack = Content.Load<Texture2D>("character_attack");
-            objPlayer.img = Content.Load<Texture2D>("Character");
+            objPlayer.img = Content.Load<Texture2D>("Main Character");
             Lago.img = Content.Load<Texture2D>("lago");
             objPlayer.imgHealth = Content.Load<Texture2D>("health");
             objRoom.LoadWalls(Content, objRoom.leftopen, objRoom.rightopen, objRoom.upopen, objRoom.downopen, LeftWall, RightWall, UpWall, DownWall, Wallskin); //carga los hitboxes tambien
             //hitbox
-            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X - objPlayer.img.Width / 2), (int)(objPlayer.Pos.Y - objPlayer.img.Height / 2), objPlayer.img.Width, objPlayer.img.Height);
+            objPlayer.rctBody = new Rectangle((int)(objPlayer.Pos.X), (int)(objPlayer.Pos.Y), 85, 127);
             //Font
             font = Content.Load<SpriteFont>("MyFont");
             // Collision data
                 //player
+            objPlayer.sourceRectangle = new Rectangle(85, 0, 85, 147);
             objPlayer.textureData = new Color[objPlayer.img.Width * objPlayer.img.Height];
             objPlayer.img.GetData(objPlayer.textureData);
                 //lago
@@ -152,6 +158,8 @@ namespace Apokas
 
         protected override void Update(GameTime gameTime)
         {
+            objPlayer.Vida_func();
+
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
@@ -203,7 +211,6 @@ namespace Apokas
 
                         }
                         btnTry.Update(mouse);
-
                     }
                     
 
@@ -218,7 +225,7 @@ namespace Apokas
                     }
 
                     // Movimiento Jugador
-                    objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword);
+                    objPlayer.Control(ref objPlayer.isAttacking, ref objPlayer.rctSword, gameTime);
 
                     //Updatea los Rectangles
                     objPlayer.rctBody.X = (int)objPlayer.Pos.X + (int)objPlayer.Speed.X;
@@ -241,6 +248,33 @@ namespace Apokas
                         }
                     }
 
+                    //Memory
+                    if (Memory != null)
+                    {
+                        Memory.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                        if (Memory.win >= 4)
+                        {
+                            //Gana juego
+                        }
+                        if (Memory.counter == 1)
+                        {
+                            Memory.counter = 0;
+                            Memory = null;
+                        }
+                    }
+
+                    //Healthpack
+
+                    if (Healthpack != null)
+                    {
+                        objConosla.cout("sup", null, null, null);
+                        Healthpack.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
+                        if (Healthpack.counter == 1)
+                        {
+                            Healthpack.counter = 0;
+                            Healthpack = null;
+                        }
+                    }
 
                     //walls
                     LeftWall.CollisionwPlayer(ref objPlayer.Speed, objPlayer.rctBody, ref objPlayer.Vida, objPlayer.textureData);
@@ -252,7 +286,7 @@ namespace Apokas
                     PosUpdate(ref objPlayer.rctBody, ref objPlayer.Pos, ref objPlayer.Speed);
 
                     // Cambio de cuarto
-                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, ref objEnemy1, LeftWall, RightWall, UpWall, DownWall,ref Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin);
+                    objRoom.RoomChange(ref objRoom.world, ref objRoom.Roomx, ref objRoom.Roomy, objPlayer, ref objEnemy1, LeftWall, RightWall, UpWall, DownWall,ref Roca, Lago, ref objRoom.leftopen, ref objRoom.rightopen, ref objRoom.upopen, ref objRoom.downopen, Content, Wallskin, ref Memory, ref Healthpack);
 
                     break;
                 case GameState.Settings:
@@ -294,29 +328,35 @@ namespace Apokas
                         if (Roca[a] != null)
                         {
                             spriteBatch.Draw(Roca[a].img, Roca[a].Pos, Color.White);
-                            spriteBatch.Draw(red, new Vector2(Roca[a].rct.X, Roca[a].rct.Y), Color.White);
                         }
                     }
+                    // Laguito
                     spriteBatch.Draw(Lago.img, Lago.Pos, Color.White);
 
-                    //JUGADOR
-                    if (objPlayer.isAttacking == true)
-                        spriteBatch.Draw(objPlayer.imgattack, objPlayer.Pos, Color.White * Opacity);
-                    else
-                        spriteBatch.Draw(objPlayer.img, objPlayer.Pos, Color.White * Opacity);
+                    //Healthpack
+                    if (Healthpack != null)
+                    {
+                        spriteBatch.Draw(Healthpack.img, Healthpack.Pos, Color.White);
+                    }
+
+                    //Memory
+                    if (Memory != null)
+                    {
+                        spriteBatch.Draw(Memory.img, Memory.Pos, Color.White);
+                    }
+
+                    //PLAYER
+                    spriteBatch.Draw(objPlayer.img, objPlayer.Pos, objPlayer.sourceRectangle, Color.White * Opacity);
 
                     // Enemigos
                     for (int a = 0; a < 3; a++) // Dibujando enemigos
                     {
                         if (objEnemy1[a] != null)
                         {
-                            spriteBatch.Draw(objEnemy1[a].img, objEnemy1[a].Pos, Color.White);
+                            spriteBatch.Draw(objEnemy1[a].img, objEnemy1[a].Pos, objEnemy1[a].sourceRectangle, Color.White);
                         }
                     }
 
-                    // TEST ESPADA
-                    spriteBatch.Draw(red, new Vector2(objPlayer.rctSword.X, objPlayer.rctSword.Y), Color.White);
-                    spriteBatch.Draw(red, new Vector2(objPlayer.rctBody.X, objPlayer.rctBody.Y), Color.White);
 
                     //PUERTAS
                     spriteBatch.Draw(Wallskin[2].img, new Vector2(0, 0), Color.White);
@@ -333,8 +373,6 @@ namespace Apokas
                         spriteBatch.Draw(Content.Load<Texture2D>("DeathMenu"), new Rectangle(0, 0, 1000, 700), Color.White);
                         btnTry.Draw(spriteBatch);
                         btnQuit.Draw(spriteBatch);
-                        
-                        
                     }
 
                     //TEXTO
